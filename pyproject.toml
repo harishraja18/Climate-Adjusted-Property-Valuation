@@ -1,0 +1,18 @@
+[project]
+name = "climate-adjusted-property-valueation-tool"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "fiona>=1.10.1",
+    "geopandas>=1.1.4",
+    "httpx>=0.28.1",
+    "joblib>=1.6.0",
+    "pandas>=3.0.6",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.1",
+    "uvicorn>=0.54.0",
+    "xgboost>=3.4.1",
+]

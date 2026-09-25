@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Government of Tamil Nadu">
+
+    <!-- Site Title -->
+    <title>District Climate Insights - Tamil Nadu | Tamil Nadu Climate Tracker</title>
+
+    <!-- SEO Meta Tags -->
+        <meta name="description" content="Explore detailed climate profiles, emissions data, and sustainability metrics for all 38 districts of Tamil Nadu. Track district-wise climate action and progress.">
+
+        <meta name="keywords" content="Tamil Nadu districts, district climate profile, district emissions, district insights, climate data by district, Tamil Nadu climate zones">
+
+    
+
+    <!-- Favicon Icon -->
+    <link rel="icon" href="/assets/img/favicon.webp">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=pMEjVRQy8QqWW4qfcG06j57TbhVkYg9SDeZM31v-bck">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css?v=RJgeeb1EKzTfSBkUcBoDqNjI6N4GqGBFbSiUsrulL3A">
+    <link rel="stylesheet" href="/assets/css/slick.min.css?v=uIC9KAvhGnN8FetUa7BIu2aCJpSV8IiXD0YmA3PNky0">
+    <link rel="stylesheet" href="/assets/css/odometer.css?v=SmMNphY_PTJnmWq_TeyYPAWBzab_9MX2OzWcbNLquSM">
+    <link rel="stylesheet" href="/assets/css/light-gallerr.min.css?v=M5MCLlooa33XLW2-oYuxRQlfQfSqTZQ8MkmzvtGjAmM">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css?v=AE17EcmdjzTg8o6di6MfcXB0z0OHQRI2UkgGYZU2X5k">
+    <link rel="stylesheet" href="/assets/css/animate.css?v=Vm8KZSaAyH0uys_cMKhO94qpD0phVUDJEXrfSBRH_7c">
+    <link rel="stylesheet" href="/assets/css/style.css?v=VJq6HpYV2C-dhjklDIazln1UqM7Tc_FVQpyycuYFAHU">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0XLswKz7zYiFJETE4NC3jcdKhZdpwH9_rack1wKwrDU">
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=UYPmxeVYsNJ0gxbMaIm3eKieXAx5vz8VOH77U-IxDZo">
+    <link rel="stylesheet" href="/assets/css/launch-animation.css?v=yEUOJ1Q_VqplPYejodLIETNBPzJF3t9YeJHEOkkHjYU">
+    <link href="/external/sweetalert/sweetalert2.css?v=rJhrTmaJAeFgtoDiVkttflPzdzSQEOSV3BEuVv_5NcY" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Immediate Launch Status Check - Prevents Flash -->
+    <script nonce="I0golRbWc3CI/asT1tQBl&#x2B;8gBmGtIeiT0QASSVH7aP4=">
+        (function() {
+            // Check if inauguration query parameter is present
+            const urlParams = new URLSearchParams(window.location.search);
+            const showInauguration = urlParams.has('inauguration');
+
+            if (showInauguration) {
+                // Add class to body to show launch overlay
+                document.body.classList.add('launch-active');
+            } else {
+                // Add class to body to immediately hide launch overlay
+                document.body.classList.add('launch-completed');
+            }
+        })();
+    </script>
+
+    <!-- Launch Animation Overlay - Website Inauguration -->
+    <div b-14sphz77ml class="launch-overlay" id="launchOverlay">
+        <div b-14sphz77ml class="rnOuter" id="curtainContainer">
+            <!-- Left Curtain -->
+            <div b-14sphz77ml class="rnInner rnInner-left" id="curtainInnerLeft">
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+            </div>
+            <!-- Right Curtain -->
+            <div b-14sphz77ml class="rnInner rnInner-right" id="curtainInnerRight">
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+                <div b-14sphz77ml class="rnUnit"></div>
+            </div>
+        </div>
+
+        <div b-14sphz77ml class="aoTable">
+            <div b-14sphz77ml class="aoTableCell">
+
+                <div b-14sphz77ml class="aoTable">
+                    <div b-14sphz77ml class="aoTableCell">
+                        <div b-14sphz77ml class="launch-content">
+                            <img src="/assets/img/leaf-left.webp" alt="" class="leaf-left-img">
+                            <div b-14sphz77ml class="logo-container">
+                                <img src="/assets/img/logo-1.webp" alt="" class="tn-logo">
+                                <img src="/assets/img/logo-2.webp" alt="" class="tn-logo">
+                                <img src="/assets/img/logo-3.webp" alt="" class="tn-logo">
+                            </div>
+
+                            <h1 b-14sphz77ml class="cm-title">Tamil Nadu</h1>
+                            <p b-14sphz77ml class="inauguration-subtitle">Climate Action Tracker</p>
+                            <span b-14sphz77ml>Data-Backed, District-Led Blueprint for Climate Action</span>
+
+                            <div b-14sphz77ml class="lunching-date">
+                                <span b-14sphz77ml><img src="/assets/img/verify.webp" alt="blue tick" class="blue-tick"> Launch Date:</span> 31st October 2025
+                            </div>
+
+                            <div b-14sphz77ml>
+                                <button b-14sphz77ml id="launchBtn" aria-label="Launch Website" class="cs_btn cs_style_1 launch-btn">
+                                    Launch Website
+                                </button>
+                            </div>
+
+                            <img src="/assets/img/logo-4.webp" alt="" class="bottom-logo">
+                            <img src="/assets/img/leaf-right.webp" alt="" class="leaf-right-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Launch Animation Overlay -->
+        </div>
+    </div>
+
+    <!-- End Launch Animation Overlay -->
+    <!-- Start Header Section -->
+    <header b-14sphz77ml class="cs_site_header cs_style_1 cs_sticky_header">
+        <div b-14sphz77ml class="cs_main_header">
+            <div b-14sphz77ml class="container">
+                <div b-14sphz77ml class="cs_main_header_in">
+                    <div b-14sphz77ml class="cs_main_header_left">
+                        <a class="cs_site_branding" href="/">
+                            <img src="/assets/img/logo.webp" alt="Logo">
+                        </a>
+                    </div>
+                    <div b-14sphz77ml class="cs_main_header_center">
+                        <div b-14sphz77ml class="cs_nav">
+                            <ul b-14sphz77ml class="cs_nav_list">
+                                <li b-14sphz77ml>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li b-14sphz77ml><a href="/districtinsights">District Insights</a></li>
+                                <li b-14sphz77ml class="menu-item-has-children">
+                                    <a href="">Net Zero Navigator</a>
+                                    <ul b-14sphz77ml>
+                                        <li b-14sphz77ml>
+                                            <a href="/netzeronavigator/decarbonizationpathways">
+                                                Decarbonisation
+                                                Pathways
+                                            </a>
+                                        </li>
+                                            <li b-14sphz77ml>                                                 
+                                                <a b-14sphz77ml href="https://tnsolar.vasudha-foundation.org/"target="_blank">
+                                                    Solar Rooftop Potential Assessment
+                                                </a>
+                                            </li>
+                                        <li b-14sphz77ml>
+                                            <a href="/netzeronavigator/navigatingtransitionrisks">
+                                                Navigating
+                                                Transition Risks
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li b-14sphz77ml><a href="/eras">E-RAS</a></li>
+                                <li b-14sphz77ml><a href="/actiontracker">Action Tracker</a></li>
+                                <li b-14sphz77ml>
+                                    <a href="/communities">Communities</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="blog.html">Knowledge Hub</a>
+                                </li> -->
+                                <li b-14sphz77ml class="menu-item-has-children">
+                                    <a b-14sphz77ml href="#">Knowledge Hub</a>
+                                    <ul b-14sphz77ml>
+                                        <li b-14sphz77ml><a href="/knowledgehub/allreports">All Reports</a></li>
+                                        <li b-14sphz77ml><a href="/knowledgehub/faq">FAQs</a></li>
+
+                                    </ul>
+                                </li>
+                                <li b-14sphz77ml><a href="/analytics">Analytics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div b-14sphz77ml class="cs_main_header_right">
+                        <a b-14sphz77ml class="cs_site_branding" href="/">
+                            <img src="/assets/img/vasudha-logo.webp" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div b-14sphz77ml class="cs_side_header">
+        <button b-14sphz77ml class="cs_close"></button>
+        <div b-14sphz77ml class="cs_side_header_overlay"></div>
+    </div>
+    <!-- End Header Section -->
+    
+<!-- Start light-green Section -->
+<section class="light-green">
+    <img src="/assets/img/leafs/leaf-left-1.webp" alt="" class="leaf-left">
+    <img src="/assets/img/leafs/leaf-right-1.webp" alt="" class="leaf-right">
+    <div class=" cs_height_100 cs_height_lg_75">
+    </div>
+    <div class="container">
+        <div class="cs_section_heading cs_style_1 text-center">
+            <!-- <h3 class="cs_fs_21 cs_semibold cs_accent_color cs_mb_13 wow fadeIn" data-wow-duration="0.8s"
+            data-wow-delay="0.25s">
+            District Insights
+        </h3> -->
+        <h2 class="cs_fs_51 cs_mb_9">
+            Explore Tamil Nadu
+            by District/City
+        </h2>
+        <p class="mb-0">
+            Select a district or city to explore detailed insights on its profile, GHG emissions, and climate variability and projections.
+        </p>
+    </div>
+    <div class="cs_height_90 cs_height_lg_50"></div>
+</div>
+<!-- district -->
+<div class="cs_slider cs_style_1 cs_slider_gap_24 cs_ptb_12">
+    <div class="container">
+        <h3 class="slider-heading">
+            Districts
+        </h3>
+        <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0"
+        data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2"
+        data-md-slides="3" data-lg-slides="4" data-add-slides="4">
+        <div class="cs_slider_wrapper">
+            
+            <div class="cs_slide">
+                <a href="/districtprofile/nilgiris">
+                    <div class="cs_card cs_style_3 text-center cs_heading_bg">
+                        <img src="/assets/img/Nilgiris_Small.webp" class="cs_card_thumb" alt="the nilgiris">
+                        <h3 class="cs_card_title mb-0 cs_white_color cs_semibold cs_fs_28">
+                            The Nilgiris
+                        </h3>
+                        <a class="cs_btn cs_style_2 cs_white_color" href="/districtprofile/nilgiris">
+                            Learn More
+                            <i>
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            </svg>
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg>
+                    </i>
+                </a>
+            </div>
+        </a>
+    </div>
+    
+    <div class="cs_slide">
+        <a href="/districtprofile/coimbatore">
+            <div class="cs_card cs_style_3 text-center cs_heading_bg">
+                <img src="/assets/img/Coimbatore_Small.webp" class="cs_card_thumb" alt="coimbatore">
+                <h3 class="cs_card_title mb-0 cs_white_color cs_semibold cs_fs_28">
+                    Coimbatore
+                </h3>
+                <a class="cs_btn cs_style_2 cs_white_color" href="/districtprofile/coimbatore">
+                    Learn More
+                    <i>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+            </i>
+        </a>
+    </div>
+</a>
+</div>
+<div class="cs_slide">
+    <a href="/districtprofile/virudhunagar">
+        <div class="cs_card cs_style_3 text-center cs_heading_bg">
+            <img src="/assets/img/Virudhunagar_Small.webp" alt="" class="cs_card_thumb">
+            <h3 class="cs_card_title mb-0 cs_white_color cs_semibold cs_fs_28">
+                Virudhunagar
+            </h3>
+            <a class="cs_btn cs_style_2 cs_white_color" href="/districtprofile/virudhunagar">
+                Learn More
+                <i>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+        </i>
+    </a>
+</div>
+</a>
+</div>
+<div class="cs_slide">
+    <a href="/districtprofile/ramanathapuram">
+        <div class="cs_card cs_style_3 text-center cs_heading_bg">
+            <img src="/assets/img/Ramanathapuram_Small.webp" class="cs_card_thumb" alt="ramanathapuram">
+            <h3 class="cs_card_title mb-0 cs_white_color cs_semibold cs_fs_28">
+                Ramanathapuram
+            </h3>
+            <a class="cs_btn cs_style_2 cs_white_color" href="/districtprofile/ramanathapuram">
+                Learn More
+                <i>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+        </i>
+    </a>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="cs_slider_arrows cs_style_1 cs_type_1">
+    <div class="cs_arrow_wrap cs_arrow_wrap_left cs_center">
+        <div class="cs_left_arrow rounded-circle cs_center">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM31 7L1 7V9L31 9V7Z"
+                fill="currentColor" />
+            </svg>
+        </div>
+    </div>
+    <div class="cs_arrow_wrap cs_arrow_wrap_right cs_center">
+        <div class="cs_right_arrow rounded-circle cs_center">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.7071 8.70711C31.0976 8.31658 31.0976 7.68342 30.7071 7.29289L24.3431 0.928932C23.9526 0.538408 23.3195 0.538408 22.9289 0.928932C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM0 9H30V7H0V9Z"
+                fill="currentColor" />
+            </svg>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Cities -->
+<div class="cs_slider cs_style_1 cs_slider_gap_24 cs_ptb_12">
+    <div class="cs_height_90 cs_height_lg_50"></div>
+    <div class="container">
+        <h3 class="slider-heading">
+            Cities
+        </h3>
+        <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0"
+        data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2"
+        data-md-slides="3" data-lg-slides="4" data-add-slides="4">
+        <div class="cs_slider_wrapper">
+            
+            <div class="cs_slide">
+                <a href="javascript:void(0);" class="pdf-card" data-pdf="assets/pdf/Rajapalayam.pdf">
+                    <div class="cs_card cs_style_3 text-center cs_heading_bg">
+                        <img src="/assets/img/Rajapalayam_small.webp" class="cs_card_thumb" alt="rajapalyam">
+                        <h3 class="cs_card_title mb-0 cs_white_color cs_semibold cs_fs_28">
+                            Rajapalayam
+                        </h3>
+                                <a href="assets/pdf/Rajapalayam.pdf" target="_blank" class="cs_btn cs_style_2 cs_white_color">
+                                    Learn More
+                                    <i>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </i>
+                                </a>
+                          </div>
+                      </a>
+                 </div>
+                 <div class="cs_slide">
+                        <a href="javascript:void(0);" class="pdf-card" data-pdf="assets/pdf/Rameshwaram.pdf">
+                            <div class="cs_card cs_style_3 text-center cs_heading_bg">
+
+                                <img src="/assets/img/Rameswaram_Small.webp" class="cs_card_thumb" alt="rameswaram">
+
+                                <h3 class="cs_card_title mb-0 cs_white_color cs_semibold cs_fs_28">
+                                    Rameswaram
+                                </h3>
+                                <a href="assets/pdf/Rameshwaram.pdf" target="_blank"
+                                     class="cs_btn cs_style_2 cs_white_color">
+                                    Learn More
+                                    <i>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L9 1M9 1L1 1M9 1L9 9" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </div>
+                        </a>
+</div>
+</div>
+</div>
+</div>
+<div class="cs_slider_arrows cs_style_1 cs_type_1">
+    <div class="cs_arrow_wrap cs_arrow_wrap_left cs_center">
+        <div class="cs_left_arrow rounded-circle cs_center">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM31 7L1 7V9L31 9V7Z"
+                fill="currentColor" />
+            </svg>
+        </div>
+    </div>
+    <div class="cs_arrow_wrap cs_arrow_wrap_right cs_center">
+        <div class="cs_right_arrow rounded-circle cs_center">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.7071 8.70711C31.0976 8.31658 31.0976 7.68342 30.7071 7.29289L24.3431 0.928932C23.9526 0.538408 23.3195 0.538408 22.9289 0.928932C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM0 9H30V7H0V9Z"
+                fill="currentColor" />
+            </svg>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<script nonce="I0golRbWc3CI/asT1tQBl&#x2B;8gBmGtIeiT0QASSVH7aP4=">
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".pdf-card").forEach(card => {
+            card.addEventListener("click", function (e) {
+                e.preventDefault();
+                const pdfUrl = this.getAttribute("data-pdf");
+                if (pdfUrl) {
+                    window.open(pdfUrl, "_blank");
+                } else {
+                    console.warn("No PDF file found for this card.");
+                }
+            });
+        });
+    });
+    
+</script>
+
+    <!-- Start Footer Section -->
+    <footer b-14sphz77ml class="cs_footer cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/footerBg.webp">
+
+        <div b-14sphz77ml class="container cs_white_color">
+            <div b-14sphz77ml class="cs_footer_row">
+                <div b-14sphz77ml class="cs_footer_col fullWidth">
+                    <div b-14sphz77ml class="cs_footer_widget">
+                        <div b-14sphz77ml class="cs_footer_text_widget">
+                            <a class="mb-sm-4 mb-3 d-inline-block" href="/">
+                                <img src="/assets/img/footer-logo.webp" alt="Logo" class="footer-logo">
+                            </a>
+                            <p b-14sphz77ml>
+                                Empowering citizens with transparent climate data and tracking our<span b-14sphz77ml class="footer-br"></span> collective journey
+                                towards a sustainable, low-carbon future for Tamil Nadu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div b-14sphz77ml class="cs_footer_inside_col">
+                    <div b-14sphz77ml class="cs_footer_col">
+                        <div b-14sphz77ml class="cs_footer_widget">
+                            <h2 b-14sphz77ml class="cs_footer_widget_title cs_fs_21 cs_white_color cs_semibold cs_mb_32">
+                                Quick Links
+                            </h2>
+                            <ul b-14sphz77ml class="cs_footer_widget_menu">
+                                <li b-14sphz77ml><a href="/districtinsights">District Insights</a></li>
+                                <li b-14sphz77ml><a href="/netzeronavigator/decarbonizationpathways">Decarbonisation Pathways</a></li>
+                                    <li b-14sphz77ml><a href="/netzeronavigator/solarrooftoppotentialassessment">Solar Rooftop</a></li>
+                                <li b-14sphz77ml><a href="/actiontracker">Action Tracker</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div b-14sphz77ml class="cs_footer_col">
+                        <div b-14sphz77ml class="cs_footer_widget">
+                            <h2 b-14sphz77ml class="cs_footer_widget_title cs_fs_21 cs_white_color cs_semibold cs_mb_32">
+                                Support
+                            </h2>
+                            <ul b-14sphz77ml class="cs_footer_widget_menu">
+                                <li b-14sphz77ml><a href="/aboutus">About Us</a></li>
+                                <li b-14sphz77ml><a href="/contactus">Contact Us</a></li>
+                                <li b-14sphz77ml><a href="/privacypolicy">Privacy Policy</a></li>
+                                <li b-14sphz77ml><a href="/termsandconditions">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div b-14sphz77ml class="cs_footer_bottom cs_white_color">
+            <div b-14sphz77ml class="container">
+                <div b-14sphz77ml class="cs_footer_bottom_in">
+                    <p b-14sphz77ml class="cs_copyright mb-0">© 2025 Government of Tamil Nadu. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="/assets/js/jquery-3.6.0.min.js?v=7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB-vXNBlKRSJESc"></script>
+    <script src="/assets/js/bootstrap.min.js?v=9a6PWZ8o-xGv_qmmi3Vbaz8n12NQC-piQpGfHva0k4k"></script>
+    <script src="/assets/js/jquery.slick.min.js?v=v6a-GX11KOHSXHFeAzobHPS8SMs0GUd1US9gkRxYTGA"></script>
+    <script src="/assets/js/odometer.js?v=s6_7vy6Nkggz7r9Oa-AbZAdSVD7K3oXTOxlujeDnIRI"></script>
+    <script src="/assets/js/YTPlayer.min.js?v=87t86E7fSFHXRINGwVG73_A0zojYJDPfWVp6bKD1XFg"></script>
+    <script src="/assets/js/light-gallery.min.js?v=geJcTDPEvKAVw6Yl-b7DkGWsxf_-Kw_rSn5pcOMKpzs"></script>
+    <script src="/assets/js/jquery-ui.min.js?v=xnxyOAdVBK_t678gYxWHreJvF5oHeCbJn11oDvK6DTQ"></script>
+    <script src="/assets/js/ripples.min.js?v=DeR6GL7iHxi9BDIPAm2BCfYl7pRrF3_p87PzhPWh9MU"></script>
+    <script src="/assets/js/gsap.min.js?v=ScTDtJm4ZUpqM6lxRn-rAdspMgdUE8AE9Ld8DJGk9Ds"></script>
+    <script src="/assets/js/wow.min.js?v=Toh54wFagvJ6RAKXlk4l4rSIEk6v8TNvEBniLvjIDM0"></script>
+    <script src="/assets/js/main.js?v=WCr5Qp1u0sMbjgnAUgwKMp3cFK2GwTcvzQRhnHR_gds"></script>
+    <script src="/external/unobtrusive/jquery.unobtrusive-ajax.js?v=HRaTomq7agQTZQWB1l7LZs0LacCq0-kBRajY4qbbg7M"></script>
+    <script src="/external/unobtrusive/jquery.validate.js?v=27gs04nyeNuL9zc_GLQLjdbZqhNGvH-xIYgnYVPIawE"></script>
+    <script src="/external/unobtrusive/jquery.validate.unobtrusive.js?v=-KYTSRCEng1MUEN7IA9ZAiFRiC-XWMxZg_4fVR_l_U0"></script>
+    <script src="/external/unobtrusive/validate-options.js?v=wTIRejDAsANQfRek-GuIlqIpVNoIQ50WY1XmN7pjMfE"></script>
+    <script src="/assets/js/launch-animation.js?v=fQwvM06qEIjFlmuPYJVBg2lWvHBa0NAI2_rypp40zqY"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+    <script src="/assets/js/year-filter.js?v=sYorqigUfRZoyACZVgn7ZUwT7l5rbJ26sHZt6hRwB_0"></script>
+    <script src="/external/sweetalert/sweetalert2.js?v=17yIBL0E59Uu0KHyUjmenh8DVgstzTXTPVDZgv8txK4"></script>
+
+    
+
+    <script nonce="I0golRbWc3CI/asT1tQBl&#x2B;8gBmGtIeiT0QASSVH7aP4=">
+        document.addEventListener('DOMContentLoaded', function () {
+            var glossaryBtn = document.getElementById('openGlossaryModal');
+            if (glossaryBtn) {
+                glossaryBtn.addEventListener('click', function () {
+                    var glossaryModal = new bootstrap.Modal(document.getElementById('glossaryModal'));
+                    glossaryModal.show();
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

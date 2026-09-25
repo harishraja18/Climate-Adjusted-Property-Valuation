@@ -1,0 +1,903 @@
+{
+    "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5.",
+    "baselineData": [
+        {
+            "scenario": "Baseline - Observed",
+            "period": null,
+            "monthOrSeason": "March",
+            "value": 33.2,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        },
+        {
+            "scenario": "Baseline - Observed",
+            "period": null,
+            "monthOrSeason": "April",
+            "value": 33.7,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        },
+        {
+            "scenario": "Baseline - Observed",
+            "period": null,
+            "monthOrSeason": "May",
+            "value": 33.7,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        },
+        {
+            "scenario": "Baseline - Observed",
+            "period": null,
+            "monthOrSeason": "MAM",
+            "value": 33.6,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        },
+        {
+            "scenario": "Baseline - Simulated",
+            "period": null,
+            "monthOrSeason": "March",
+            "value": 32.1,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        },
+        {
+            "scenario": "Baseline - Simulated",
+            "period": null,
+            "monthOrSeason": "April",
+            "value": 32.9,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        },
+        {
+            "scenario": "Baseline - Simulated",
+            "period": null,
+            "monthOrSeason": "May",
+            "value": 33.1,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        },
+        {
+            "scenario": "Baseline - Simulated",
+            "period": null,
+            "monthOrSeason": "MAM",
+            "value": 32.7,
+            "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+        }
+    ],
+    "rcP45": {
+        "scenario": "RCP4.5",
+        "baselineData": [
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 33.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 32.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 32.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            }
+        ],
+        "projectionData": [
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "March",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "April",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "May",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "MAM",
+                "value": 32.8,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "March",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "April",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "May",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "MAM",
+                "value": 33.3,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "March",
+                "value": 33.4,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "April",
+                "value": 33.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "May",
+                "value": 33.4,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "MAM",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "March",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "April",
+                "value": 34.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "May",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "MAM",
+                "value": 33.8,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            }
+        ],
+        "combinedData": [
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 33.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 32.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 32.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "March",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "April",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "May",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2030s",
+                "monthOrSeason": "MAM",
+                "value": 32.8,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "March",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "April",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "May",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2050s",
+                "monthOrSeason": "MAM",
+                "value": 33.3,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "March",
+                "value": 33.4,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "April",
+                "value": 33.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "May",
+                "value": 33.4,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2070s",
+                "monthOrSeason": "MAM",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "March",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "April",
+                "value": 34.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "May",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP4.5",
+                "period": "2090s",
+                "monthOrSeason": "MAM",
+                "value": 33.8,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            }
+        ]
+    },
+    "rcP85": {
+        "scenario": "RCP8.5",
+        "baselineData": [
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 33.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 32.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 32.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            }
+        ],
+        "projectionData": [
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "March",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "April",
+                "value": 33.3,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "May",
+                "value": 32.8,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "MAM",
+                "value": 32.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "March",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "April",
+                "value": 34.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "May",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "MAM",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "March",
+                "value": 34.3,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "April",
+                "value": 35,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "May",
+                "value": 34.5,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "MAM",
+                "value": 34.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "March",
+                "value": 35.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "April",
+                "value": 35.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "May",
+                "value": 35.4,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "MAM",
+                "value": 35.5,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            }
+        ],
+        "combinedData": [
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 33.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Observed",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "March",
+                "value": 32.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "April",
+                "value": 32.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "May",
+                "value": 33.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "Baseline - Simulated",
+                "period": null,
+                "monthOrSeason": "MAM",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "March",
+                "value": 32.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "April",
+                "value": 33.3,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "May",
+                "value": 32.8,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2030s",
+                "monthOrSeason": "MAM",
+                "value": 32.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "March",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "April",
+                "value": 34.1,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "May",
+                "value": 33.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2050s",
+                "monthOrSeason": "MAM",
+                "value": 33.7,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "March",
+                "value": 34.3,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "April",
+                "value": 35,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "May",
+                "value": 34.5,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2070s",
+                "monthOrSeason": "MAM",
+                "value": 34.6,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "March",
+                "value": 35.2,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "April",
+                "value": 35.9,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "May",
+                "value": 35.4,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            },
+            {
+                "scenario": "RCP8.5",
+                "period": "2090s",
+                "monthOrSeason": "MAM",
+                "value": 35.5,
+                "inferenceText": "The seasonal mean maximum temperature (March–April–May) is projected to increase by 0.1°C in the 2030s to 1.1°C by the end of the century under the RCP4.5 scenario, and by 0.2°C in the 2030s to 2.8°C by the end of the century under the RCP8.5 scenario.<br>The baseline simulations show 10% warm days in the summer season. The percentage of warm days is projected to increase to 36% in the 2030s to 71% by the end of the century under RCP4.5, and to 40% in the 2030s to 96% by the end of the century under RCP8.5."
+            }
+        ]
+    },
+    "chartData": {
+        "categories": [
+            "March",
+            "April",
+            "May",
+            "MAM"
+        ],
+        "periods": [
+            "2030s",
+            "2050s",
+            "2070s",
+            "2090s"
+        ],
+        "scenarios": [
+            "Baseline - Observed",
+            "Baseline - Simulated",
+            "RCP4.5",
+            "RCP8.5"
+        ]
+    },
+    "comparisonChartData": {
+        "monthlyComparison": [
+            {
+                "monthOrSeason": "March",
+                "baselineObserved": 33.2,
+                "baselineSimulated": 32.1,
+                "rcP45": {
+                    "2030s": 32.7,
+                    "2050s": 33.1,
+                    "2070s": 33.4,
+                    "2090s": 33.6
+                },
+                "rcP85": {
+                    "2030s": 32.7,
+                    "2050s": 33.6,
+                    "2070s": 34.3,
+                    "2090s": 35.2
+                }
+            },
+            {
+                "monthOrSeason": "April",
+                "baselineObserved": 33.7,
+                "baselineSimulated": 32.9,
+                "rcP45": {
+                    "2030s": 33.1,
+                    "2050s": 33.6,
+                    "2070s": 33.9,
+                    "2090s": 34.2
+                },
+                "rcP85": {
+                    "2030s": 33.3,
+                    "2050s": 34.1,
+                    "2070s": 35,
+                    "2090s": 35.9
+                }
+            },
+            {
+                "monthOrSeason": "May",
+                "baselineObserved": 33.7,
+                "baselineSimulated": 33.1,
+                "rcP45": {
+                    "2030s": 32.7,
+                    "2050s": 33.1,
+                    "2070s": 33.4,
+                    "2090s": 33.7
+                },
+                "rcP85": {
+                    "2030s": 32.8,
+                    "2050s": 33.6,
+                    "2070s": 34.5,
+                    "2090s": 35.4
+                }
+            },
+            {
+                "monthOrSeason": "MAM",
+                "baselineObserved": 33.6,
+                "baselineSimulated": 32.7,
+                "rcP45": {
+                    "2030s": 32.8,
+                    "2050s": 33.3,
+                    "2070s": 33.6,
+                    "2090s": 33.8
+                },
+                "rcP85": {
+                    "2030s": 32.9,
+                    "2050s": 33.7,
+                    "2070s": 34.6,
+                    "2090s": 35.5
+                }
+            }
+        ],
+        "months": [
+            "March",
+            "April",
+            "May",
+            "MAM"
+        ],
+        "scenarioSummary": {
+            "rcP45Summary": {
+                "periods": [
+                    "2030s",
+                    "2050s",
+                    "2070s",
+                    "2090s"
+                ],
+                "averageValues": [
+                    {
+                        "period": "2030s",
+                        "averageValue": 32.825
+                    },
+                    {
+                        "period": "2050s",
+                        "averageValue": 33.275
+                    },
+                    {
+                        "period": "2070s",
+                        "averageValue": 33.575
+                    },
+                    {
+                        "period": "2090s",
+                        "averageValue": 33.825
+                    }
+                ]
+            },
+            "rcP85Summary": {
+                "periods": [
+                    "2030s",
+                    "2050s",
+                    "2070s",
+                    "2090s"
+                ],
+                "averageValues": [
+                    {
+                        "period": "2030s",
+                        "averageValue": 32.925
+                    },
+                    {
+                        "period": "2050s",
+                        "averageValue": 33.75
+                    },
+                    {
+                        "period": "2070s",
+                        "averageValue": 34.6
+                    },
+                    {
+                        "period": "2090s",
+                        "averageValue": 35.5
+                    }
+                ]
+            }
+        }
+    }
+}

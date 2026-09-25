@@ -1,0 +1,11 @@
+property_id,district,city,latitude,longitude,area_sqft,market_rate_per_sqft
+TN001,Chennai,Chennai,13.0827,80.2707,1200,6500
+TN002,Coimbatore,Coimbatore,11.0168,76.9558,1500,5000
+TN003,Madurai,Madurai,9.9252,78.1198,1200,4200
+TN004,Tiruchirappalli,Tiruchirappalli,10.7905,78.7047,1300,3800
+TN005,Salem,Salem,11.6643,78.1460,1400,3500
+TN006,Tiruppur,Tiruppur,11.1085,77.3411,1200,3600
+TN007,Erode,Erode,11.3410,77.7172,1300,3300
+TN008,Thanjavur,Thanjavur,10.7867,79.1378,1400,3000
+TN009,Pudukkottai,Pudukkottai,10.3797,78.8208,1200,2800
+TN010,Nagapattinam,Nagapattinam,10.7672,79.8449,1200,2600

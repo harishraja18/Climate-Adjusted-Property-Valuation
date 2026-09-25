@@ -1,0 +1,11 @@
+property_id,district,city,latitude,longitude,area_sqft,market_rate_per_sqft,base_value,flood_exposure,heat_risk,tmax_change,heat_source,cyclone_intensity,nearest_cyclone_km,max_nearby_wind_knots,cyclone_source
+TN001,Chennai,Chennai,13.0827,80.2707,1200,6500,7800000.0,0,,,unavailable,0.571,13.4,60.0,historical_track_100km
+TN002,Coimbatore,Coimbatore,11.0168,76.9558,1500,5000,7500000.0,0,0.852,,district_mean,0.143,50.3,30.0,historical_track_100km
+TN003,Madurai,Madurai,9.9252,78.1198,1200,4200,5040000.0,0,,,unavailable,0.357,67.2,45.0,historical_track_100km
+TN004,Tiruchirappalli,Tiruchirappalli,10.7905,78.7047,1300,3800,4940000.0,0,,,unavailable,1,40.5,90.0,historical_track_100km
+TN005,Salem,Salem,11.6643,78.1460,1400,3500,4900000.0,0,,,unavailable,0.357,46.6,45.0,historical_track_100km
+TN006,Tiruppur,Tiruppur,11.1085,77.3411,1200,3600,4320000.0,0,,,unavailable,0.143,35.4,30.0,historical_track_100km
+TN007,Erode,Erode,11.3410,77.7172,1300,3300,4290000.0,0,0.314,,district_mean,0.357,6.8,45.0,historical_track_100km
+TN008,Thanjavur,Thanjavur,10.7867,79.1378,1400,3000,4200000.0,0,0.109,0.312,exact_block,1,32.1,90.0,historical_track_100km
+TN009,Pudukkottai,Pudukkottai,10.3797,78.8208,1200,2800,3360000.0,0,0.501,0.649,exact_block,0.714,33.3,70.0,historical_track_100km
+TN010,Nagapattinam,Nagapattinam,10.7672,79.8449,1200,2600,3120000.0,0,,,unavailable,1,30.6,90.0,historical_track_100km

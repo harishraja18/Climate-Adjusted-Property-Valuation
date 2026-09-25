@@ -1,0 +1,2206 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd"
+ [
+ <!ELEMENT VendorSpecificCapabilities EMPTY>
+ ]>  <!-- end of DOCTYPE declaration -->
+
+<WMT_MS_Capabilities version="1.1.1">
+
+<!-- MapServer version 7.0.7 (MS4W 3.2.8) OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=CAIRO SUPPORTS=SVG_SYMBOLS SUPPORTS=SVGCAIRO SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=FASTCGI SUPPORTS=THREADS SUPPORTS=GEOS SUPPORTS=POINT_Z_M INPUT=JPEG INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>OGC:WMS</Name>
+  <Title>Flood_Layers</Title>
+  <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+  <KeywordList>
+      <Keyword>Disaster</Keyword>
+      <Keyword>Flood</Keyword>
+      <Keyword>Bhuvan</Keyword>
+      <Keyword>ogc</Keyword>
+      <Keyword>DSC</Keyword>
+      <Keyword>NRSC</Keyword>
+      <Keyword>ISRO</Keyword>
+      <Keyword>India</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.nrsc.gov.in"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+<!-- WARNING: Mandatory metadata '..._contactperson' was missing in this context. -->
+      <ContactOrganization>NRSC/ISRO</ContactOrganization>
+    </ContactPersonPrimary>
+    <ContactAddress>
+<!-- WARNING: Mandatory metadata '..._addresstype' was missing in this context. -->
+<!-- WARNING: Mandatory metadata '..._address' was missing in this context. -->
+<!-- WARNING: Mandatory metadata '..._city' was missing in this context. -->
+<!-- WARNING: Mandatory metadata '..._stateorprovince' was missing in this context. -->
+<!-- WARNING: Mandatory metadata '..._postcode' was missing in this context. -->
+        <Country>India</Country>
+    </ContactAddress>
+  <ContactElectronicMailAddress>bhuvan@nrsc.gov.in</ContactElectronicMailAddress>
+  </ContactInformation>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>application/vnd.ogc.wms_xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>application/x-pdf</Format>
+      <Format>image/svg+xml</Format>
+      <Format>image/tiff</Format>
+      <Format>application/vnd.google-earth.kml+xml</Format>
+      <Format>application/vnd.google-earth.kmz</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/plain</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </DescribeLayer>
+    <GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetLegendGraphic>
+    <GetStyles>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetStyles>
+  </Request>
+  <Exception>
+    <Format>application/vnd.ogc.se_xml</Format>
+    <Format>application/vnd.ogc.se_inimage</Format>
+    <Format>application/vnd.ogc.se_blank</Format>
+  </Exception>
+  <VendorSpecificCapabilities />
+  <UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0"/>
+  <Layer>
+    <Name>Flood</Name>
+    <Title>Flood_Layers</Title>
+    <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+    <KeywordList>
+        <Keyword>Disaster</Keyword>
+        <Keyword>Flood</Keyword>
+        <Keyword>Bhuvan</Keyword>
+        <Keyword>ogc</Keyword>
+        <Keyword>DSC</Keyword>
+        <Keyword>NRSC</Keyword>
+        <Keyword>ISRO</Keyword>
+        <Keyword>India</Keyword>
+    </KeywordList>
+    <SRS>EPSG:4326</SRS>
+    <LatLonBoundingBox minx="66" miny="6" maxx="102" maxy="40" />
+    <BoundingBox SRS="EPSG:4326"
+                minx="66" miny="6" maxx="102" maxy="40" />
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_1998</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_1998&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_1999</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_1999&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2000</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2000&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2001</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2001&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2002</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2002&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2003</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2003&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2004</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2004&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2005</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2005&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2006</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2006&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2007</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2007&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2008</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2008&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2009</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2009&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_fld_2010</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_fld_2010&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_1998</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_1998&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_1999</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_1999&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2000</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2000&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2001</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2001&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2002</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2002&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2003</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2003&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2004</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2004&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2005</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2005&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2006</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2006&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2007</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2007&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2008</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2008&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2009</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2009&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_fld_2010</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="108" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_fld_2010&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_river</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6997" miny="24.1327" maxx="96.021" maxy="27.972" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="165" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_river&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>br_river</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.3243" miny="24.2869" maxx="88.2983" maxy="27.5213" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="165" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=br_river&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_011112_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_021112_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_051112_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_061112_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_241013_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="58" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ap_241013_flood&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_271013_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="58" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ap_271013_flood&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_271013e_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="58" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ap_271013e_flood&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ap_281013_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="76.7608" miny="12.6223" maxx="84.7674" maxy="19.9165" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="58" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ap_281013_flood&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_010711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.6203" miny="26.3254" maxx="95.0567" maxy="27.5825" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.6203" miny="26.3254" maxx="95.0567" maxy="27.5825" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_060711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_170711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_200711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_220711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_230711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_250711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_300711_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_030811_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_090811_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_060612_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_080612_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_200612_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_270612_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_290612_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_29300612_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_010712_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_020712_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_040712_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_080712_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_190712_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_240712_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_290712_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_070812_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_160912_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_190912_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_220912_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_240912_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_260912_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_250811_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_010713_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_01020713_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_090713_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>gj_240913_flood</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>DSC</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.6998" miny="24.1327" maxx="96.0211" maxy="27.9721" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_cyclone</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_cyclone</Title>
+        <LatLonBoundingBox minx="81.2922" miny="17.6374" maxx="87.6043" maxy="22.7724" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="81.2922" miny="17.6374" maxx="87.6043" maxy="22.7724" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="165" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=or_cyclone&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_011011_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_011011_flood</Title>
+        <LatLonBoundingBox minx="82.1822" miny="18.7311" maxx="87.5074" maxy="22.4897" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="82.1822" miny="18.7311" maxx="87.5074" maxy="22.4897" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_050911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_050911_flood</Title>
+        <LatLonBoundingBox minx="84.8117" miny="19.5931" maxx="87.4997" maxy="22.2946" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.8117" miny="19.5931" maxx="87.4997" maxy="22.2946" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_080911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_080911_flood</Title>
+        <LatLonBoundingBox minx="82.4057" miny="19.0295" maxx="86.8494" maxy="22.4362" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="82.4057" miny="19.0295" maxx="86.8494" maxy="22.4362" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_100911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_100911_flood</Title>
+        <LatLonBoundingBox minx="83.4308" miny="19.0782" maxx="87.5786" maxy="22.6309" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.4308" miny="19.0782" maxx="87.5786" maxy="22.6309" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_120911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_120911_flood</Title>
+        <LatLonBoundingBox minx="81.8848" miny="18.5512" maxx="86.9207" maxy="22.5657" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="81.8848" miny="18.5512" maxx="86.9207" maxy="22.5657" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_140911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_140911_flood</Title>
+        <LatLonBoundingBox minx="84.4444" miny="19.2853" maxx="87.5612" maxy="21.8216" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.4444" miny="19.2853" maxx="87.5612" maxy="21.8216" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_170911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_170911_flood</Title>
+        <LatLonBoundingBox minx="83.568" miny="19.3484" maxx="87.6637" maxy="22.7682" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.568" miny="19.3484" maxx="87.6637" maxy="22.7682" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_190911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_190911_flood</Title>
+        <LatLonBoundingBox minx="84.6834" miny="19.2015" maxx="87.5218" maxy="21.7898" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.6834" miny="19.2015" maxx="87.5218" maxy="21.7898" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_260911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_260911_flood</Title>
+        <LatLonBoundingBox minx="84.4132" miny="19.5091" maxx="87.5236" maxy="22.5303" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.4132" miny="19.5091" maxx="87.5236" maxy="22.5303" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_280911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_280911_flood</Title>
+        <LatLonBoundingBox minx="85.7825" miny="20.1191" maxx="87.1127" maxy="21.3449" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.7825" miny="20.1191" maxx="87.1127" maxy="21.3449" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_290911_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_290911_flood</Title>
+        <LatLonBoundingBox minx="84.0701" miny="18.5843" maxx="88.322" maxy="22.9185" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.0701" miny="18.5843" maxx="88.322" maxy="22.9185" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>punjab_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>punjab_flood</Title>
+        <LatLonBoundingBox minx="74.6495" miny="28.9896" maxx="77.2159" maxy="30.7983" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="74.6495" miny="28.9896" maxx="77.2159" maxy="30.7983" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>tn_011112_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>tn_011112_flood</Title>
+        <LatLonBoundingBox minx="78.8082" miny="10.2123" maxx="80.0027" maxy="11.9178" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="78.8082" miny="10.2123" maxx="80.0027" maxy="11.9178" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_281013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_281013_flood</Title>
+        <LatLonBoundingBox minx="85.8597" miny="20.735" maxx="89.9153" maxy="23.6855" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.8597" miny="20.735" maxx="89.9153" maxy="23.6855" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_170713_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_170713_flood</Title>
+        <LatLonBoundingBox minx="85.8899" miny="21.9801" maxx="90.1136" maxy="27.2906" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.8899" miny="21.9801" maxx="90.1136" maxy="27.2906" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_150713_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_150713_flood</Title>
+        <LatLonBoundingBox minx="85.7671" miny="21.4692" maxx="89.8935" maxy="27.221" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.7671" miny="21.4692" maxx="89.8935" maxy="27.221" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_020711_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_020711_flood</Title>
+        <LatLonBoundingBox minx="84.8602" miny="20.0652" maxx="91.0605" maxy="27.3138" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.8602" miny="20.0652" maxx="91.0605" maxy="27.3138" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_120811_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_120811_flood</Title>
+        <LatLonBoundingBox minx="86.4523" miny="21.4164" maxx="89.3044" maxy="25.7652" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="86.4523" miny="21.4164" maxx="89.3044" maxy="25.7652" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_160811_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_160811_flood</Title>
+        <LatLonBoundingBox minx="85.773" miny="21.8091" maxx="88.9225" maxy="24.8091" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.773" miny="21.8091" maxx="88.9225" maxy="24.8091" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_240811_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_240811_flood</Title>
+        <LatLonBoundingBox minx="86.4577" miny="21.5402" maxx="89.3918" maxy="26.6539" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="86.4577" miny="21.5402" maxx="89.3918" maxy="26.6539" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_river</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_river</Title>
+        <LatLonBoundingBox minx="81.2936" miny="17.6382" maxx="87.5483" maxy="22.7087" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="81.2936" miny="17.6382" maxx="87.5483" maxy="22.7087" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_121013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_121013_flood</Title>
+        <LatLonBoundingBox minx="84.1098" miny="19.0996" maxx="87.7746" maxy="22.8222" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.1098" miny="19.0996" maxx="87.7746" maxy="22.8222" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_131013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_131013_flood</Title>
+        <LatLonBoundingBox minx="85.8424" miny="19.7553" maxx="87.4779" maxy="21.9899" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.8424" miny="19.7553" maxx="87.4779" maxy="21.9899" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>wb_131013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>wb_131013_flood</Title>
+        <LatLonBoundingBox minx="85.6639" miny="21.3665" maxx="89.9311" maxy="27.3139" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.6639" miny="21.3665" maxx="89.9311" maxy="27.3139" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_131013_flood2</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_131013_flood2</Title>
+        <LatLonBoundingBox minx="85.9611" miny="20.9083" maxx="87.5789" maxy="22.3448" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.9611" miny="20.9083" maxx="87.5789" maxy="22.3448" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_141013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_141013_flood</Title>
+        <LatLonBoundingBox minx="81.7805" miny="18.3161" maxx="87.4955" maxy="23.1346" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="81.7805" miny="18.3161" maxx="87.4955" maxy="23.1346" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_1213141013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_1213141013_flood</Title>
+        <LatLonBoundingBox minx="84.3274" miny="18.9582" maxx="87.7542" maxy="22.4345" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.3274" miny="18.9582" maxx="87.7542" maxy="22.4345" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_12151013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_12151013_flood</Title>
+        <LatLonBoundingBox minx="81.2929" miny="17.5333" maxx="87.8419" maxy="22.7817" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="81.2929" miny="17.5333" maxx="87.8419" maxy="22.7817" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_151013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_151013_flood</Title>
+        <LatLonBoundingBox minx="81.589" miny="18.7851" maxx="87.2392" maxy="22.485" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="81.589" miny="18.7851" maxx="87.2392" maxy="22.485" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_12161013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_12161013_flood</Title>
+        <LatLonBoundingBox minx="81.2177" miny="17.5311" maxx="87.8443" maxy="22.8068" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="81.2177" miny="17.5311" maxx="87.8443" maxy="22.8068" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_171013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_171013_flood</Title>
+        <LatLonBoundingBox minx="85.8554" miny="19.8462" maxx="87.5409" maxy="21.9456" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.8554" miny="19.8462" maxx="87.5409" maxy="21.9456" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_181013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_181013_flood</Title>
+        <LatLonBoundingBox minx="85.8271" miny="19.8265" maxx="87.4875" maxy="21.9361" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="85.8271" miny="19.8265" maxx="87.4875" maxy="21.9361" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_251013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_251013_flood</Title>
+        <LatLonBoundingBox minx="84.8098" miny="19.5305" maxx="86.4207" maxy="21.2901" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.8098" miny="19.5305" maxx="86.4207" maxy="21.2901" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_281013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_281013_flood</Title>
+        <LatLonBoundingBox minx="83.921" miny="18.5414" maxx="85.5377" maxy="20.4295" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.921" miny="18.5414" maxx="85.5377" maxy="20.4295" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_281013m_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_281013m_flood</Title>
+        <LatLonBoundingBox minx="84.2065" miny="18.691" maxx="87.546" maxy="22.845" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="84.2065" miny="18.691" maxx="87.546" maxy="22.845" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_291013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_291013_flood</Title>
+        <LatLonBoundingBox minx="83.4369" miny="18.9137" maxx="88.0467" maxy="22.1843" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.4369" miny="18.9137" maxx="88.0467" maxy="22.1843" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>or_28291013_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>or_28291013_flood</Title>
+        <LatLonBoundingBox minx="83.4329" miny="18.6814" maxx="88.0625" maxy="22.845" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="83.4329" miny="18.6814" maxx="88.0625" maxy="22.845" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_08090813_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>as_08090813_flood</Title>
+        <LatLonBoundingBox minx="93.2862" miny="25.8045" maxx="94.1886" maxy="26.9377" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.2862" miny="25.8045" maxx="94.1886" maxy="26.9377" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_140813_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>as_140813_flood</Title>
+        <LatLonBoundingBox minx="89.429" miny="24.0832" maxx="95.0745" maxy="28.1209" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.429" miny="24.0832" maxx="95.0745" maxy="28.1209" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_090913_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>as_090913_flood</Title>
+        <LatLonBoundingBox minx="87.578" miny="23.664" maxx="98.6562" maxy="29.8326" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="87.578" miny="23.664" maxx="98.6562" maxy="29.8326" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>as_190913_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>as_190913_flood</Title>
+        <LatLonBoundingBox minx="89.8528" miny="24.5519" maxx="94.9456" maxy="27.6587" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="89.8528" miny="24.5519" maxx="94.9456" maxy="27.6587" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="88" height="20">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://bhuvan-ras2.nrsc.gov.in/cgi-bin/mapserv.exe?map=/ms4w/apps/mapfiles/flood.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=as_190913_flood&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_17sep05_fld</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="77.2278" miny="18.4182" maxx="81.1048" maxy="22.149" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="77.2278" miny="18.4182" maxx="81.1048" maxy="22.149" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_13aug06_fld2</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="75.5461" miny="19.1362" maxx="76.3423" maxy="19.4243" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="75.5461" miny="19.1362" maxx="76.3423" maxy="19.4243" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_10aug06_fld</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="78.8496" miny="19.5008" maxx="79.7972" maxy="19.9847" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="78.8496" miny="19.5008" maxx="79.7972" maxy="19.9847" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_13aug06_fld</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="75.5461" miny="19.1362" maxx="76.3423" maxy="19.4243" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="75.5461" miny="19.1362" maxx="76.3423" maxy="19.4243" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_05aug05_fld2</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="73.9871" miny="19.9889" maxx="74.1593" maxy="20.1069" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="73.9871" miny="19.9889" maxx="74.1593" maxy="20.1069" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_29jul05_fld</Name>
+        <Title>Bhuvan</Title>
+        <Abstract>Bhuvan OGC Web Service of Disaster Datasets-Flood</Abstract>
+        <KeywordList>
+            <Keyword>Disaster</Keyword>
+            <Keyword>Flood</Keyword>
+            <Keyword>Bhuvan</Keyword>
+            <Keyword>ogc</Keyword>
+            <Keyword>NRSC</Keyword>
+            <Keyword>ISRO</Keyword>
+            <Keyword>India</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="72.7159" miny="18.6425" maxx="73.3289" maxy="19.5158" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="72.7159" miny="18.6425" maxx="73.3289" maxy="19.5158" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_020813_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>mh_020813_flood</Title>
+        <LatLonBoundingBox minx="74.6258" miny="16.9562" maxx="80.6508" maxy="22.508" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="74.6258" miny="16.9562" maxx="80.6508" maxy="22.508" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_180713_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>mh_180713_flood</Title>
+        <LatLonBoundingBox minx="74.9842" miny="17.6036" maxx="80.9147" maxy="23.05" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="74.9842" miny="17.6036" maxx="80.9147" maxy="23.05" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>mh_240713_flood</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>mh_240713_flood</Title>
+        <LatLonBoundingBox minx="75.7116" miny="18.9776" maxx="81.7257" maxy="24.4376" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="75.7116" miny="18.9776" maxx="81.7257" maxy="24.4376" />
+    </Layer>
+  </Layer>
+</Capability>
+</WMT_MS_Capabilities>

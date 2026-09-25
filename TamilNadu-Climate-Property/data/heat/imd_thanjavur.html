@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mausam SANKALP</title>
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/plotly-latest.min.js"></script>
+    <link href="/static/css/style1.css" rel="stylesheet" />
+    <script xmlns="http://www.w3.org/1999/html">
+    $(document).ready(function(){
+  $("select").change(function(){
+  var id=$(this).attr('id');
+  var url='';
+  var element='';
+  if(id=="State")
+  {
+  getall(document.getElementById('State').value);
+  return;
+  }
+  else if(id=="District")
+  {
+  getblock();
+  }
+  else if(id=="startWeek" || id=="endWeek")
+  {
+  document.getElementById('startMonth').selectedIndex=0;
+  document.getElementById('endMonth').selectedIndex=0;
+  return;
+  }
+  else if(id=="startMonth" || id=="endMonth")
+  {
+  document.getElementById('startWeek').selectedIndex=0;
+  document.getElementById('endWeek').selectedIndex=0;
+  return;
+  }
+
+  else
+  {
+  return;
+  }
+  });
+});
+    function getblock()
+    {
+     jQuery.ajax({
+      url: '/getblock',
+      method: 'post',
+      data: {
+         id: document.getElementById('District').value,
+         state: document.getElementById('State').value,
+      },
+      success: function(result){
+
+          var options='';
+          dist=result.District
+
+
+         for (dist of result.District) {
+
+         options=options+"<option value='"+dist.id+"'>"+dist.id+"</option>";
+
+         }
+          
+         document.getElementById('Block').innerHTML=options;
+         jQuery('.alert').show();
+         jQuery('.alert').html(result.success);
+      }
+    });
+    }
+
+    function getall(State)
+    {
+     jQuery.ajax({
+      url: '/getstate_district',
+      method: 'post',
+      data: {
+         id: State
+      },
+      success: function(results){
+         var options='';
+         for (dist of results.District) {
+         options=options+"<option value='"+dist.id+"'>"+dist.id+"</option>";
+         }
+         document.getElementById('District').innerHTML=options;
+         options='';
+
+         for (dist of results.Block) {
+         options=options+"<option value='"+dist.id+"'>"+dist.id+"</option>";
+         }
+         document.getElementById('Block').innerHTML=options;
+         jQuery('.alert').show();
+         jQuery('.alert').html(results.success);
+      }});
+    }
+
+
+</script>
+    <style>
+        .blink {
+  /* Apply the animation to the element */
+  animation: blink 1s step-end infinite;
+}
+
+/* Define the animation behavior */
+@keyframes blink {
+  from, to {
+    color: transparent; /* Text is invisible */
+  }
+  30% {
+    color: black; /* Text is visible */
+  }
+}
+
+
+
+    /* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 0px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:10px;
+}
+
+td, th {
+
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
+
+th {
+    background-color: blue;
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+        .rounded-box {
+  border: 2px solid #73AD21; /* Adds a border */
+  background-color: #f0f0f0; /* Optional background color */
+  padding: 20px;
+  width: 200px;
+  border-radius: 25px; /* Rounds all corners by 25px */
+}
+
+    </style>
+
+
+</head>
+<body>
+
+
+<header> <div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+
+<div class="divTableCell" style="display:inline-block;"><h3> Mausam SANKALP</h3>
+  <h4> Systematic Agrometeorological aNalytics, Knowledge and Advisory enabLing Platform</h4>
+  <h5>Agromet-Advisory Services Division</h5>
+  <h6>India Meteorological Department</h6>
+  <h6>Ministry of Earth Sciences, Govt of India.</h6></div>
+<div class="divTableCell" align="right" style="vertical-align:top" ><img src="../static/images/emblem-dark.png" height="100px"/>&nbsp;&nbsp;&nbsp;<img src="../static/images/imd150t_old.webp" height="100px"/>&nbsp;&nbsp;&nbsp;<img src="../static/images/esso.png" height="100px"/>&nbsp;&nbsp;&nbsp;<img src="../static/images/imd_logo_enamble.png" height="160px"/></div>
+    </div></header>
+<div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+  <div></div><div></div><div></div>
+</div>
+<div class="container">
+  <nav class="sidebar" id="sidebar" aria-label="Primary Navigation">
+    <ul class="menu" role="menu">
+ <li role="none">
+     Welcome
+
+</li>
+
+
+               <li role="none">
+        <a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-expanded="false" aria-controls="sub5">Current Status <span class="arrow">▶</span>
+        </a>
+          <ul class="submenu" id="sub5" role="menu" aria-hidden="true">
+              <li role="none"><a href="/observed" role="menuitem" tabindex="-1" >Observed        </a>         </li>
+              <li role="none"><a href="/tas/anomaly" role="menuitem" tabindex="-1">Anamoly</a></li>
+             <!-- <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub51">rainfall<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub51" role="menu" aria-hidden="true">
+
+
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Distributed</a></li>
+
+               </ul>
+            </li><
+               <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub7">Temperature<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub7" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Quantum</a></li>
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Distributed</a></li>
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Intensity</a></li>
+
+               </ul>
+            </li>-->
+          </ul>
+      </li>
+
+
+      <li role="none">
+        <a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-expanded="false" aria-controls="sub1">Historical Insights <span class="arrow">▶</span>
+        </a>
+          <ul class="submenu" id="sub1" role="menu" aria-hidden="true">
+              <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub2"><b>Rainfall</b><span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub2" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/rf" role="menuitem" tabindex="-1">Quantum</a></li>
+
+                   <li role="none"><a href="/rfinst" role="menuitem" tabindex="-1">Intensity & Xtremes</a></li>
+                    <li role="none"><a href="/rfdry"role="menuitem" tabindex="-1">Dry/Wet Period</a></li>
+
+               </ul>
+            </li>
+               <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub4"><b>Temperature</b><span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub4" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/tas/tas" role="menuitem" tabindex="-1">Climatology</a></li>
+                     <li role="none"><a href="/tas/tmaxinst"role="menuitem" tabindex="-1">Threshold Exceedance</a></li>
+
+
+               </ul>
+            </li>
+
+                <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub20"><b>Relative Humidity</b><span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub20" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/rh/rh" role="menuitem" tabindex="-1">Climatology</a></li>
+                  <!-- <li role="none"><a href="/rh/rhmaxinst" role="menuitem" tabindex="-1">Extremes</a></li> -->
+
+               </ul>
+            </li>
+
+                <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub21"><b>Wind Speed</b><span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub21" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/ws/ws" role="menuitem" tabindex="-1"> Climatology</a></li>
+                   <li role="none"><a href="/ws/wsinst" role="menuitem" tabindex="-1">Threshold Exceedance</a></li>
+
+
+               </ul>
+            </li>
+
+
+
+          </ul>
+      </li>
+<!--        <li role="none">
+        <a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-expanded="false" aria-controls="sub5">Current Status <span class="arrow">▶</span>
+        </a>
+          <ul class="submenu" id="sub5" role="menu" aria-hidden="true">
+              <li role="none"><a href="/observed" role="menuitem" tabindex="-1" >Observed        </a>         </li> 
+              <li role="none"><a href="/tas/anomaly" role="menuitem" tabindex="-1">Anamoly</a></li>
+             <!-- <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub51">rainfall<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub51" role="menu" aria-hidden="true">
+
+
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Distributed</a></li>
+
+               </ul>
+            </li><
+               <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub7">Temperature<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub7" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Quantum</a></li>
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Distributed</a></li>
+                   <li role="none"><a href="#" role="menuitem" tabindex="-1">Intensity</a></li>
+
+               </ul>
+            </li>
+          </ul>
+      </li> -->
+     <li role="none">
+        <a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-expanded="false" aria-controls="sub6">Forecast Outlook <span class="arrow">▶</span>
+        </a>
+          <ul class="submenu" id="sub6" role="menu" aria-hidden="true">
+
+               <li role="none"><a href="/nowcast" role="menuitem" tabindex="-1">Nowcast   </a>
+
+            </li>
+               <li role="none"><a href="/shortrange" role="menuitem" tabindex="-1">Short range   </a>
+
+            </li>
+              <li role="none"><a href="/mediumrange" role="menuitem" tabindex="-1">Medium range   </a>
+
+            </li>
+          </ul>
+      </li>
+      <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub9">Crop<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub9" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/crophistory" role="menuitem" tabindex="-1">Historical</a></li>
+                   <li role="none"><a href="/cropcurrent" role="menuitem" tabindex="-1">Current Year</a></li>
+
+
+               </ul>
+            </li>
+<!--     <li role="none">
+        <a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-expanded="false" aria-controls="sub10">Decision Support <span class="arrow">▶</span>
+        </a>
+          <ul class="submenu" id="sub10" role="menu" aria-hidden="true">
+              <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub21">Agriculture<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub21" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/cropcurrent" role="menuitem" tabindex="-1">Current Crop</a></li>
+                   <li role="none"><a href="/agri_adv" role="menuitem" tabindex="-1">Advisoriers</a></li>
+
+               </ul>
+            </li>
+              <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub15">Horticulture<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub15" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/rf" role="menuitem" tabindex="-1">Advisoriers</a></li>
+
+               </ul>
+            </li>
+              <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub16">Poultry<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub16" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/rf" role="menuitem" tabindex="-1">Advisory</a></li>
+
+               </ul>
+            </li>
+              <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub17">Livestock<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub17" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/rf" role="menuitem" tabindex="-1">Advisory</a></li>
+
+               </ul>
+            </li>
+              <li role="none"><a href="#" role="menuitem" tabindex="0" class="submenu-toggle" aria-controls="sub18">Fisheries<span class="arrow">▶</span>        </a>
+                <ul class="submenu" id="sub18" role="menu" aria-hidden="true">
+
+                   <li role="none"><a href="/rf" role="menuitem" tabindex="-1">Advisory</a></li>
+
+               </ul>
+            </li>
+          </ul>
+      </li>-->
+
+    </ul>
+  </nav>
+    <main class="content" tabindex="0">
+
+
+<script xmlns="http://www.w3.org/1999/html">
+$(document).ready(function(){
+  $("select").change(function(){
+  var id=$(this).attr('id');
+  var url='';
+  var element='';
+  if(id=="State")
+  {
+  element="District";
+  url="/getdist";
+  document.getElementById("Block").innerHTML="<option selected value='-- Select --'>-- Select --</option>";
+  }
+  else if(id=="District")
+  {
+  element="Block";
+  url="/getblock";
+  }
+   else if(id=="startWeek" || id=="endWeek")
+  {
+  document.getElementById('startMonth').selectedIndex=0;
+  document.getElementById('endMonth').selectedIndex=0;
+   document.getElementById('Periods').selectedIndex=0;
+  return;
+  }
+  else if(id=="startMonth" || id=="endMonth")
+  {
+  document.getElementById('startWeek').selectedIndex=0;
+  document.getElementById('endWeek').selectedIndex=0;
+  document.getElementById('Periods').selectedIndex=0;
+  return;
+  }
+  else if(id=="Periods")
+  {
+  document.getElementById('startMonth').selectedIndex=0;
+  document.getElementById('endMonth').selectedIndex=0;
+  document.getElementById('startWeek').selectedIndex=0;
+  document.getElementById('endWeek').selectedIndex=0;
+  return;
+  }
+  
+
+  else
+  {
+  return;
+  }
+
+ jQuery.ajax({
+      url: url,
+      method: 'post',
+      data: {
+         id: $(this).val(),
+         state: $('#State').val(),
+      },
+      success: function(result){
+
+          var options='';
+          dist=result.District
+         for (dist of result.District) {
+         options=options+"<option value='"+dist.id+"'>"+dist.id+"</option>";
+         }
+         document.getElementById(element).innerHTML=options;
+
+         jQuery('.alert').show();
+         jQuery('.alert').html(result.success);
+      }
+    });
+  });
+});
+</script>
+
+
+<section class="is-title-bar">
+  <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+    <ul class="menu">
+      <li><h3>Dashboard/Maximum Temperature</h3></li>
+
+    </ul>
+
+  </div>
+</section>
+
+    <div class="content">
+          <div class="card mb-4">
+              <form method="POST" action="/tas/tas">
+            <div class="card-body">
+              <div class="row g-2 align-items-end">
+
+                <div class="col-md-3">
+                  <label class="form-label" for="State">State</label>
+                      <select class="form-select" id="State" name="State"><option value="AP">Andhra Pradesh</option><option value="AR">Arunachal Pradesh</option><option value="AN">Andaman &amp; Nicobar</option><option value="AS">Assam</option><option value="BR">Bihar</option><option value="KA">Karnataka</option><option value="KL">Kerala</option><option value="MP">Madhya Pradesh</option><option value="MH">Maharashtra</option><option selected value="TN">Tamil Nadu</option><option value="TS">Telangana</option><option value="LD">Lakshadweep</option><option value="MN">Manipur</option><option value="ML">Meghalaya</option><option value="MZ">Mizoram</option><option value="NL">Nagaland</option><option value="OD">Odhisa</option><option value="PB">Punjab</option><option value="PY">Puducherry</option><option value="RJ">Rajasthan</option><option value="SK">Sikkim</option><option value="TR">Tripura</option><option value="UP">Uttar Pradesh</option><option value="UK">Uttarakhand</option><option value="WB">West Bengal</option><option value="CH">Chandigarh</option><option value="CG">Chhattisgarh</option><option value="DN">Dadra and Nagar Haveli</option><option value="DL">Delhi</option><option value="GA">Goa</option><option value="GJ">Gujarat</option><option value="HR">Haryana</option><option value="HP">Himachal Pradesh</option><option value="JK">Jammu and Kashmir</option><option value="JH">Jharkhand</option></select>
+                </div>
+                <div class="col-md-3">
+                 <label class="form-label" for="District">District</label>
+                  <select class="form-select" id="District" name="District"><option value="The Nilgiris">The Nilgiris</option><option value="Coimbatore">Coimbatore</option><option value="Erode">Erode</option><option value="Kanniyakumari">Kanniyakumari</option><option value="Tirunelveli">Tirunelveli</option><option value="Theni">Theni</option><option value="Tiruppur">Tiruppur</option><option value="Dindigul">Dindigul</option><option value="Virudunagar">Virudunagar</option><option value="Krishnagiri">Krishnagiri</option><option value="Thoothukkudi">Thoothukkudi</option><option value="Madurai">Madurai</option><option value="Karur">Karur</option><option value="Namakkal">Namakkal</option><option value="Salem">Salem</option><option value="Dharmapuri">Dharmapuri</option><option value="Ramanathapuram">Ramanathapuram</option><option value="Sivaganga">Sivaganga</option><option value="Tiruchirappalli">Tiruchirappalli</option><option value="Pudukkottai">Pudukkottai</option><option value="Vellore">Vellore</option><option selected value="Thanjavur">Thanjavur</option><option value="Perambalur">Perambalur</option><option value="Viluppuram">Viluppuram</option><option value="Tiruvannamalai">Tiruvannamalai</option><option value="Ariyalur">Ariyalur</option><option value="Cuddalore">Cuddalore</option><option value="Thiruvarur">Thiruvarur</option><option value="Thiruvallur">Thiruvallur</option><option value="Nagappattinam">Nagappattinam</option><option value="Kancheepuram">Kancheepuram</option><option value="Chennai">Chennai</option><option value="Chittoor">Chittoor</option></select>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label" for="Block">Block</label>
+                     <select class="form-select" id="Block" name="Block"><option value="Budalur">Budalur</option><option selected value="Thanjavur">Thanjavur</option><option value="Thiruvaiyaru">Thiruvaiyaru</option><option value="Pattukkottai">Pattukkottai</option><option value="Peravurani">Peravurani</option><option value="Sethubhavachatram">Sethubhavachatram</option><option value="Karambakkudi">Karambakkudi</option><option value="Madukkur">Madukkur</option><option value="Thiruvonam">Thiruvonam</option><option value="Orathanadu">Orathanadu</option><option value="Ammapettai">Ammapettai</option><option value="Valangaiman">Valangaiman</option><option value="Aranthangi">Aranthangi</option><option value="Papanasam">Papanasam</option><option value="Kumbakonam">Kumbakonam</option><option value="Thiruvidaimarudur">Thiruvidaimarudur</option><option value="Thiruppanandal">Thiruppanandal</option></select>
+                </div>
+                <div class="col-md-auto">
+                    <input class="btn btn-primary w-100" id="rfsubmit" name="rfsubmit" type="submit" value="Submit">
+  <input id="csrf_token" name="csrf_token" type="hidden" value="Ijg0MDZkNGJlODhjN2YzMjA5NWI5N2IzNjRiYmIyOTUwNDJhNmYyMWEi.araT0Q.udRpXHn5Qh-7oSoqufVt4vW2OI8">
+
+                </div>
+
+              </div>
+            </div>
+              </form>
+          </div>
+
+         <div class="card mb-4">
+
+            <div class="card-body">
+                <form method="POST" action="/tas/tas">
+                     <input id="csrf_token" name="csrf_token" type="hidden" value="Ijg0MDZkNGJlODhjN2YzMjA5NWI5N2IzNjRiYmIyOTUwNDJhNmYyMWEi.araT0Q.udRpXHn5Qh-7oSoqufVt4vW2OI8">
+                 <div class="row g-2 align-items-end">
+
+                <div class="col-md-3">
+                  <label class="form-label" for="Periods">Periods</label>
+                      <select class="form-select" id="Periods" name="Periods"><option value="0">--Select--</option><option value="Annual">Annual</option><option value="JJAS">JJAS</option><option value="OND">OND</option><option value="MAM">MAM</option><option value="JF">JF</option><option value="0">-- select --</option></select>
+                </div>
+
+
+
+              </div>
+              <div class="row g-2 align-items-end">
+
+                <div class="col-md-3">
+                  <label class="form-label" for="startMonth">Start Month</label>
+                      <select class="form-select" id="startMonth" name="startMonth"><option value="0">Select--</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+                </div>
+                <div class="col-md-3">
+                 <label class="form-label" for="endMonth">End Month</label>
+                  <select class="form-select" id="endMonth" name="endMonth"><option value="0">Select--</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+                </div>
+
+
+
+              </div>
+                <br>
+                   <div class="row g-2 align-items-end">
+
+                <div class="col-md-3">
+                  <label class="form-label" for="startWeek">Start Week</label>
+                      <select class="form-select" id="startWeek" name="startWeek"><option value="0">--Select--</option><option value="1">1 (Jan 1 - Jan 7)</option><option value="2">2 (Jan 8 - Jan 14)</option><option value="3">3 (Jan 15 - Jan 21)</option><option value="4">4 (Jan 22 - Jan 28)</option><option value="5">5 (Jan 29 - Feb 4)</option><option value="6">6 (Feb 5 - Feb 11)</option><option value="7">7 (Feb 12 - Feb 18)</option><option value="8">8 (Feb 19 - Feb 25)</option><option value="9">9 (Feb 26 - Mar 4)</option><option value="10">10 (Mar 4 - Mar 11)</option><option value="11">11 (Mar 12 - Mar 18)</option><option value="12">12 (Mar 19 - Mar 25)</option><option value="13">13 (Mar 26 - Apr 1)</option><option value="14">14 (Apr 2 - Apr 8)</option><option value="15">15 (Apr 9 - Apr 15)</option><option value="16">16 (Apr 16 - Apr 22)</option><option value="17">17 (Apr 23 - Apr 29)</option><option value="18">18 (Apr 30 - May 6)</option><option value="19">19 (May 7 - May 13)</option><option value="20">20 (May 14 - May 20)</option><option value="21">21 (May 21 - May 27)</option><option value="22">22 (May 28 - Jun 3)</option><option value="23">23 (Jun 4 - Jun 10)</option><option value="24">24 (Jun 11 - Jun 17)</option><option value="25">25 (Jun 18 - Jun 24)</option><option value="26">26 (Jun 25 - Jul 1)</option><option value="27">27 (Jul 2 - Jul 8)</option><option value="28">28 (Jul 9 - Jul 15)</option><option value="29">29 (Jul 16 - Jul 22)</option><option value="30">30 (Jul 23 - Jul 29)</option><option value="31">31 (Jul 30 - Aug 5)</option><option value="32">32 (Aug 6 - Aug 12)</option><option value="33">33 (Aug 13 - Aug 19)</option><option value="34">34 (Aug 20 - Aug 26)</option><option value="35">35 (Aug 27 - Sep 2)</option><option value="36">36 (Sep 3 - Sep 9)</option><option value="37">37 (Sep 10 - Sep 16)</option><option value="38">38 (Sep 17 - Sep 23)</option><option value="39">39 (Sep 24 - Sep 30)</option><option value="40">40 (Oct 1 - Oct 7)</option><option value="41">41 (Oct 8 - Oct 14)</option><option value="42">42 (Oct 15 - Oct 21)</option><option value="43">43 (Oct 22 - Oct 28)</option><option value="44">44 (Oct 29 - Nov 4)</option><option value="45">45 (Nov 5 - Nov 11)</option><option value="46">46 (Nov 12 - Nov 18)</option><option value="47">47 (Nov 19 - Nov 25)</option><option value="48">48 (Nov 26 - Dec 2)</option><option value="49">49 (Dec 3 - Dec 9)</option><option value="50">50 (Dec 10 - Dec 16)</option><option value="51">51 (Dec 17 - Dec 23)</option><option value="52">52 (Dec 24 - Dec 31)</option></select>
+                </div>
+                <div class="col-md-3">
+                 <label class="form-label" for="endWeek">End Week</label>
+                  <select class="form-select" id="endWeek" name="endWeek"><option value="0">--Select--</option><option value="1">1 (Jan 1 - Jan 7)</option><option value="2">2 (Jan 8 - Jan 14)</option><option value="3">3 (Jan 15 - Jan 21)</option><option value="4">4 (Jan 22 - Jan 28)</option><option value="5">5 (Jan 29 - Feb 4)</option><option value="6">6 (Feb 5 - Feb 11)</option><option value="7">7 (Feb 12 - Feb 18)</option><option value="8">8 (Feb 19 - Feb 25)</option><option value="9">9 (Feb 26 - Mar 4)</option><option value="10">10 (Mar 4 - Mar 11)</option><option value="11">11 (Mar 12 - Mar 18)</option><option value="12">12 (Mar 19 - Mar 25)</option><option value="13">13 (Mar 26 - Apr 1)</option><option value="14">14 (Apr 2 - Apr 8)</option><option value="15">15 (Apr 9 - Apr 15)</option><option value="16">16 (Apr 16 - Apr 22)</option><option value="17">17 (Apr 23 - Apr 29)</option><option value="18">18 (Apr 30 - May 6)</option><option value="19">19 (May 7 - May 13)</option><option value="20">20 (May 14 - May 20)</option><option value="21">21 (May 21 - May 27)</option><option value="22">22 (May 28 - Jun 3)</option><option value="23">23 (Jun 4 - Jun 10)</option><option value="24">24 (Jun 11 - Jun 17)</option><option value="25">25 (Jun 18 - Jun 24)</option><option value="26">26 (Jun 25 - Jul 1)</option><option value="27">27 (Jul 2 - Jul 8)</option><option value="28">28 (Jul 9 - Jul 15)</option><option value="29">29 (Jul 16 - Jul 22)</option><option value="30">30 (Jul 23 - Jul 29)</option><option value="31">31 (Jul 30 - Aug 5)</option><option value="32">32 (Aug 6 - Aug 12)</option><option value="33">33 (Aug 13 - Aug 19)</option><option value="34">34 (Aug 20 - Aug 26)</option><option value="35">35 (Aug 27 - Sep 2)</option><option value="36">36 (Sep 3 - Sep 9)</option><option value="37">37 (Sep 10 - Sep 16)</option><option value="38">38 (Sep 17 - Sep 23)</option><option value="39">39 (Sep 24 - Sep 30)</option><option value="40">40 (Oct 1 - Oct 7)</option><option value="41">41 (Oct 8 - Oct 14)</option><option value="42">42 (Oct 15 - Oct 21)</option><option value="43">43 (Oct 22 - Oct 28)</option><option value="44">44 (Oct 29 - Nov 4)</option><option value="45">45 (Nov 5 - Nov 11)</option><option value="46">46 (Nov 12 - Nov 18)</option><option value="47">47 (Nov 19 - Nov 25)</option><option value="48">48 (Nov 26 - Dec 2)</option><option value="49">49 (Dec 3 - Dec 9)</option><option value="50">50 (Dec 10 - Dec 16)</option><option value="51">51 (Dec 17 - Dec 23)</option><option value="52">52 (Dec 24 - Dec 31)</option><option value="0">-- Select --</option></select>
+                </div>
+                 <div class="col-md-3">
+
+                </div>
+                <div class="col-md-auto">
+                    <input class="btn btn-primary w-100" id="searchSubmit" name="searchSubmit" type="submit" value="Submit">
+
+
+                </div>
+
+              </div>
+                      </form>
+            </div>
+
+
+          </div>
+    </div>
+<br><br>
+<div class="row g-2 align-items-end">
+
+                <div class="col-md-6">
+                    <div style="width:700px">
+		      <div class="chart" id="bargraphmaxmin" style="width:700px;height:500px;" >
+		        <script>
+			var graphs = {"data": [{"line": {"shape": "spline", "smoothing": 0.8}, "marker": {"color": "red"}, "name": " Tmax (1995-2024)", "x": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "y": [34.22966833333333, 34.053175, 34.33587333333333, 34.591334999999994, 34.03497666666667, 34.14290833333333, 34.35246833333333, 34.724714999999996, 34.832595, 33.96691, 34.3226, 34.562246666666674, 34.66637666666667, 34.23847333333334, 34.84444333333334, 34.423051666666666, 34.50416666666667, 34.94683833333334, 34.847265, 34.64834666666666, 34.44278, 35.19141333333334, 34.97021833333333, 34.56607833333334, 35.03439, 34.50338, 34.307723333333335, 34.277035000000005, 34.72517, 34.99239666666667], "type": "scatter", "uid": "edc00af4-ab90-4b61-bc13-7f956365ebd4"}, {"line": {"shape": "spline", "smoothing": 0.8}, "marker": {"color": "blue"}, "name": "Tmin (1995-2024)", "x": [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "y": [24.155884999999998, 23.978828333333336, 24.25324, 24.66519166666667, 23.938783333333333, 24.000051666666668, 24.14484333333333, 24.243061666666666, 24.08177166666667, 23.90516666666667, 24.365045, 24.16905166666667, 24.115751666666668, 24.013139999999996, 24.11406, 24.228679999999997, 23.87121, 24.20278666666667, 24.42004833333333, 24.211061666666666, 24.33305, 24.408985, 24.539945000000003, 24.672963333333332, 24.660026666666667, 24.03707, 24.297533333333334, 24.456576666666667, 24.622794999999996, 25.236406666666667], "type": "scatter", "uid": "0656fa82-b994-4679-9e25-7cb6ff1d036b"}], "layout": {"template": {"data": {"barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}, "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}}, "type": "barpolar"}], "bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}, "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}}, "type": "bar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram": [{"marker": {"pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}}, "type": "histogram"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatter": [{"fillpattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}, "type": "scatter"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "font": {"size": 15}, "legend": {"orientation": "h", "yanchor": "bottom", "xanchor": "center", "y": 1, "x": 0.5}, "plot_bgcolor": "rgb(255,255,227)", "xaxis": {"showline": true, "linewidth": 2, "linecolor": "black", "title": {"text": "Year"}}, "yaxis": {"showline": true, "linewidth": 2, "linecolor": "black", "title": {"text": "Temperature (Celsius)"}}, "title": {"text": "Mean Temperature"}}};
+			Plotly.plot('bargraphmaxmin',graphs,{});
+		       </script>
+		     </div>
+                  </div>
+
+                </div>
+
+
+                 <div class="col-md-6">
+                  <div style="width:700px">
+   		    <div class="chart" id="bargraphcum" style="width:700px;height:500px;" >
+			    <script>
+				var graphs = {"data": [{"line": {"color": "rgb(255,0,0)", "shape": "spline", "smoothing": 0.8}, "mode": "lines", "name": "max", "showlegend": false, "x": ["1 Jan", "2 Jan", "3 Jan", "4 Jan", "5 Jan", "6 Jan", "7 Jan", "8 Jan", "9 Jan", "10 Jan", "11 Jan", "12 Jan", "13 Jan", "14 Jan", "15 Jan", "16 Jan", "17 Jan", "18 Jan", "19 Jan", "20 Jan", "21 Jan", "22 Jan", "23 Jan", "24 Jan", "25 Jan", "26 Jan", "27 Jan", "28 Jan", "29 Jan", "30 Jan", "31 Jan", "1 Feb", "2 Feb", "3 Feb", "4 Feb", "5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb", "12 Feb", "13 Feb", "14 Feb", "15 Feb", "16 Feb", "17 Feb", "18 Feb", "19 Feb", "20 Feb", "21 Feb", "22 Feb", "23 Feb", "24 Feb", "25 Feb", "26 Feb", "27 Feb", "28 Feb", "1 Mar", "2 Mar", "3 Mar", "4 Mar", "5 Mar", "6 Mar", "7 Mar", "8 Mar", "9 Mar", "10 Mar", "11 Mar", "12 Mar", "13 Mar", "14 Mar", "15 Mar", "16 Mar", "17 Mar", "18 Mar", "19 Mar", "20 Mar", "21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar", "28 Mar", "29 Mar", "30 Mar", "31 Mar", "1 Apr", "2 Apr", "3 Apr", "4 Apr", "5 Apr", "6 Apr", "7 Apr", "8 Apr", "9 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr", "1 May", "2 May", "3 May", "4 May", "5 May", "6 May", "7 May", "8 May", "9 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May", "1 Jun", "2 Jun", "3 Jun", "4 Jun", "5 Jun", "6 Jun", "7 Jun", "8 Jun", "9 Jun", "10 Jun", "11 Jun", "12 Jun", "13 Jun", "14 Jun", "15 Jun", "16 Jun", "17 Jun", "18 Jun", "19 Jun", "20 Jun", "21 Jun", "22 Jun", "23 Jun", "24 Jun", "25 Jun", "26 Jun", "27 Jun", "28 Jun", "29 Jun", "30 Jun", "1 Jul", "2 Jul", "3 Jul", "4 Jul", "5 Jul", "6 Jul", "7 Jul", "8 Jul", "9 Jul", "10 Jul", "11 Jul", "12 Jul", "13 Jul", "14 Jul", "15 Jul", "16 Jul", "17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul", "22 Jul", "23 Jul", "24 Jul", "25 Jul", "26 Jul", "27 Jul", "28 Jul", "29 Jul", "30 Jul", "31 Jul", "1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug", "8 Aug", "9 Aug", "10 Aug", "11 Aug", "12 Aug", "13 Aug", "14 Aug", "15 Aug", "16 Aug", "17 Aug", "18 Aug", "19 Aug", "20 Aug", "21 Aug", "22 Aug", "23 Aug", "24 Aug", "25 Aug", "26 Aug", "27 Aug", "28 Aug", "29 Aug", "30 Aug", "31 Aug", "1 Sep", "2 Sep", "3 Sep", "4 Sep", "5 Sep", "6 Sep", "7 Sep", "8 Sep", "9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep", "22 Sep", "23 Sep", "24 Sep", "25 Sep", "26 Sep", "27 Sep", "28 Sep", "29 Sep", "30 Sep", "1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct", "29 Oct", "30 Oct", "31 Oct", "1 Nov", "2 Nov", "3 Nov", "4 Nov", "5 Nov", "6 Nov", "7 Nov", "8 Nov", "9 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov", "19 Nov", "20 Nov", "21 Nov", "22 Nov", "23 Nov", "24 Nov", "25 Nov", "26 Nov", "27 Nov", "28 Nov", "29 Nov", "30 Nov", "1 Dec", "2 Dec", "3 Dec", "4 Dec", "5 Dec", "6 Dec", "7 Dec", "8 Dec", "9 Dec", "10 Dec", "11 Dec", "12 Dec", "13 Dec", "14 Dec", "15 Dec", "16 Dec", "17 Dec", "18 Dec", "19 Dec", "20 Dec", "21 Dec", "22 Dec", "23 Dec", "24 Dec", "25 Dec", "26 Dec", "27 Dec", "28 Dec", "29 Dec", "30 Dec", "31 Dec"], "y": [32.01148, 32.11629, 31.66009, 32.13319, 32.16567, 31.90174, 32.01389, 31.81378, 31.03176, 31.78781, 31.9872, 31.99812, 32.93562, 32.56038, 32.69659, 32.30193, 32.56841, 32.13331, 31.99197, 32.61902, 32.55162, 33.89528, 33.37218, 33.2455, 32.77715, 33.07591, 33.03692, 33.11056, 33.06307, 33.51191, 33.46038, 33.61661, 33.59104, 33.29131, 33.75059, 33.3036, 33.50533, 33.91905, 33.77661, 33.69053, 33.97419, 33.66562, 33.82986, 34.02419, 34.09379, 35.04905, 35.0707, 35.7153, 35.64663, 35.41676, 34.86575, 34.76381, 35.33984, 36.08703, 35.56284, 35.30868, 35.69449, 35.91579, 35.69575, 34.36515, 36.60935, 37.09628, 36.87712, 37.54676, 36.84653, 37.25285, 37.49863, 37.31129, 37.90913, 37.01899, 36.5615, 36.87887, 37.05116, 37.73988, 37.44938, 37.81251, 37.27008, 37.617, 37.96568, 39.22086, 39.29895, 39.81478, 39.52905, 38.54276, 38.53079, 39.47998, 39.29919, 39.18803, 39.43546, 39.08405, 39.13172, 39.40906, 39.35278, 39.69539, 39.5527, 39.46877, 40.28415, 39.27446, 39.12646, 39.46471, 39.67656, 39.54683, 39.80841, 41.0471, 39.71995, 39.71821, 41.7236, 41.21907, 40.0798, 40.71513, 40.6451, 40.95627, 40.7528, 40.92192, 41.4822, 40.02945, 40.14294, 40.76656, 40.17728, 39.87037, 40.18061, 41.69405, 41.14418, 41.53811, 41.1741, 40.42841, 40.69029, 40.31874, 40.79292, 40.63557, 41.1837, 42.38667, 41.33509, 41.17963, 40.64981, 41.02993, 40.63918, 41.43672, 41.31469, 40.68447, 40.89021, 40.78045, 41.42842, 40.79751, 40.64001, 40.66479, 40.48626, 40.34464, 40.34266, 40.42017, 40.67228, 40.45943, 40.52386, 40.88401, 40.52115, 40.28793, 39.64737, 40.12208, 39.56689, 39.60268, 40.05223, 40.16044, 39.53255, 39.8496, 38.9539, 38.66122, 39.76177, 39.72047, 39.42767, 40.17416, 39.9644, 40.0012, 39.26077, 39.79385, 39.22856, 39.96436, 39.33615, 39.03629, 39.22953, 38.54159, 39.18795, 39.48501, 38.64681, 38.36541, 39.23138, 39.60365, 38.75357, 38.83379, 38.69664, 38.54366, 38.08837, 38.22781, 37.82922, 38.53081, 39.05555, 38.86369, 38.18564, 38.89322, 38.53302, 38.25298, 38.55762, 37.8539, 38.62038, 38.52993, 38.94102, 38.99329, 39.75103, 39.70286, 39.24205, 38.52872, 38.47998, 38.86399, 38.99387, 38.61536, 38.59081, 38.5159, 38.64776, 38.52851, 39.35097, 38.25307, 38.99041, 38.44564, 38.54493, 38.56851, 39.03532, 38.53185, 38.6342, 38.21131, 38.1073, 37.96248, 38.43105, 38.2776, 38.09595, 38.39679, 38.51501, 38.39914, 38.0445, 38.42069, 37.6149, 37.92267, 37.65166, 37.62751, 37.73916, 37.5452, 37.57554, 38.02147, 38.23976, 37.64231, 39.01089, 37.52066, 38.26031, 38.07166, 37.68314, 37.94372, 37.52249, 37.55311, 38.36704, 37.87568, 37.87048, 38.63988, 39.61552, 38.48262, 37.82041, 38.78562, 37.12048, 38.13844, 38.35931, 38.46101, 38.39705, 37.73562, 37.23698, 37.20799, 37.09906, 36.41798, 36.75762, 37.15244, 37.65944, 37.44301, 36.59172, 36.42615, 36.66811, 36.96482, 36.42252, 37.08361, 36.62829, 35.55012, 36.55507, 35.53553, 35.56347, 35.74453, 35.22227, 34.74654, 36.54299, 35.26437, 34.86611, 35.1903, 35.28903, 35.32232, 35.42299, 35.56747, 35.47246, 34.82913, 35.06285, 34.62455, 34.2211, 34.35494, 34.40456, 33.69878, 34.63722, 34.48673, 33.2163, 33.5809, 33.09106, 33.40058, 33.29043, 33.28048, 33.74899, 33.9598, 33.77253, 33.77562, 33.96051, 33.70438, 33.21848, 33.03054, 33.16531, 33.59361, 33.33907, 33.39508, 32.6166, 32.35516, 32.65751, 33.18018, 32.01355, 31.77634, 32.01501, 31.21246, 32.63141, 32.37525, 32.70376, 34.42754, 33.45902, 33.46942, 32.70483, 31.98753, 31.74928, 31.83815, 32.78247, 32.49337, 32.05272, 31.5849, 31.36709, 32.81957, 32.68027, 31.68258, 32.29721, 32.53281, 31.22585, 31.61872, 32.41632, 31.87478, 31.95285, 31.73248, 31.80478, 31.77514, 31.74688, 31.70443], "type": "scatter", "uid": "cc4a1301-a0e3-49e1-9f09-b2cabbc455b1"}, {"fill": "tonexty", "line": {"color": "rgb(255,0,0)", "shape": "spline", "smoothing": 0.8}, "mode": "lines", "name": "min", "showlegend": false, "x": ["1 Jan", "2 Jan", "3 Jan", "4 Jan", "5 Jan", "6 Jan", "7 Jan", "8 Jan", "9 Jan", "10 Jan", "11 Jan", "12 Jan", "13 Jan", "14 Jan", "15 Jan", "16 Jan", "17 Jan", "18 Jan", "19 Jan", "20 Jan", "21 Jan", "22 Jan", "23 Jan", "24 Jan", "25 Jan", "26 Jan", "27 Jan", "28 Jan", "29 Jan", "30 Jan", "31 Jan", "1 Feb", "2 Feb", "3 Feb", "4 Feb", "5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb", "12 Feb", "13 Feb", "14 Feb", "15 Feb", "16 Feb", "17 Feb", "18 Feb", "19 Feb", "20 Feb", "21 Feb", "22 Feb", "23 Feb", "24 Feb", "25 Feb", "26 Feb", "27 Feb", "28 Feb", "1 Mar", "2 Mar", "3 Mar", "4 Mar", "5 Mar", "6 Mar", "7 Mar", "8 Mar", "9 Mar", "10 Mar", "11 Mar", "12 Mar", "13 Mar", "14 Mar", "15 Mar", "16 Mar", "17 Mar", "18 Mar", "19 Mar", "20 Mar", "21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar", "28 Mar", "29 Mar", "30 Mar", "31 Mar", "1 Apr", "2 Apr", "3 Apr", "4 Apr", "5 Apr", "6 Apr", "7 Apr", "8 Apr", "9 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr", "1 May", "2 May", "3 May", "4 May", "5 May", "6 May", "7 May", "8 May", "9 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May", "1 Jun", "2 Jun", "3 Jun", "4 Jun", "5 Jun", "6 Jun", "7 Jun", "8 Jun", "9 Jun", "10 Jun", "11 Jun", "12 Jun", "13 Jun", "14 Jun", "15 Jun", "16 Jun", "17 Jun", "18 Jun", "19 Jun", "20 Jun", "21 Jun", "22 Jun", "23 Jun", "24 Jun", "25 Jun", "26 Jun", "27 Jun", "28 Jun", "29 Jun", "30 Jun", "1 Jul", "2 Jul", "3 Jul", "4 Jul", "5 Jul", "6 Jul", "7 Jul", "8 Jul", "9 Jul", "10 Jul", "11 Jul", "12 Jul", "13 Jul", "14 Jul", "15 Jul", "16 Jul", "17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul", "22 Jul", "23 Jul", "24 Jul", "25 Jul", "26 Jul", "27 Jul", "28 Jul", "29 Jul", "30 Jul", "31 Jul", "1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug", "8 Aug", "9 Aug", "10 Aug", "11 Aug", "12 Aug", "13 Aug", "14 Aug", "15 Aug", "16 Aug", "17 Aug", "18 Aug", "19 Aug", "20 Aug", "21 Aug", "22 Aug", "23 Aug", "24 Aug", "25 Aug", "26 Aug", "27 Aug", "28 Aug", "29 Aug", "30 Aug", "31 Aug", "1 Sep", "2 Sep", "3 Sep", "4 Sep", "5 Sep", "6 Sep", "7 Sep", "8 Sep", "9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep", "22 Sep", "23 Sep", "24 Sep", "25 Sep", "26 Sep", "27 Sep", "28 Sep", "29 Sep", "30 Sep", "1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct", "29 Oct", "30 Oct", "31 Oct", "1 Nov", "2 Nov", "3 Nov", "4 Nov", "5 Nov", "6 Nov", "7 Nov", "8 Nov", "9 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov", "19 Nov", "20 Nov", "21 Nov", "22 Nov", "23 Nov", "24 Nov", "25 Nov", "26 Nov", "27 Nov", "28 Nov", "29 Nov", "30 Nov", "1 Dec", "2 Dec", "3 Dec", "4 Dec", "5 Dec", "6 Dec", "7 Dec", "8 Dec", "9 Dec", "10 Dec", "11 Dec", "12 Dec", "13 Dec", "14 Dec", "15 Dec", "16 Dec", "17 Dec", "18 Dec", "19 Dec", "20 Dec", "21 Dec", "22 Dec", "23 Dec", "24 Dec", "25 Dec", "26 Dec", "27 Dec", "28 Dec", "29 Dec", "30 Dec", "31 Dec"], "y": [26.91942, 27.72116, 27.84957, 27.81319, 28.81503, 27.20059, 28.53859, 27.73453, 27.35974, 27.56934, 26.63781, 26.93823, 28.82003, 27.35707, 28.57355, 29.03806, 29.41299, 28.6936, 26.43825, 27.29481, 28.52771, 29.10301, 29.48758, 29.81873, 29.86983, 28.58588, 28.80661, 29.80694, 29.75352, 29.20256, 29.50432, 28.83767, 26.01287, 26.23158, 27.4449, 30.01528, 29.24353, 30.42541, 29.7831, 30.60495, 30.44419, 27.49265, 29.63064, 30.34027, 30.93065, 30.43615, 32.13724, 32.38766, 32.26983, 32.5104, 29.23341, 28.61917, 32.00998, 32.66739, 32.38988, 30.57472, 30.92272, 32.03318, 30.6142, 31.38566, 32.26529, 32.82044, 33.23894, 30.81397, 33.0743, 32.78123, 30.97683, 33.73514, 33.94244, 31.34988, 29.11404, 33.55085, 30.18747, 32.57067, 33.2442, 32.46393, 31.94207, 33.05588, 33.0266, 32.81223, 32.52839, 31.21125, 30.71614, 32.53483, 33.92427, 35.63022, 35.52687, 35.37507, 35.68292, 35.72984, 36.02303, 36.35023, 32.98077, 35.26176, 32.26673, 30.34043, 28.7297, 31.21901, 30.75064, 33.41849, 34.23246, 32.08535, 33.38235, 31.81288, 31.61072, 34.78263, 33.85543, 35.64421, 35.586, 34.79845, 35.67802, 33.83187, 30.81229, 29.28657, 33.89661, 35.32429, 35.3245, 35.57223, 36.42463, 35.72656, 35.36853, 34.74157, 32.90323, 34.06711, 30.06817, 31.33814, 30.61661, 28.12494, 33.65246, 33.70863, 34.797, 35.17111, 34.85771, 33.578, 33.76347, 34.41976, 29.62697, 30.1675, 33.53219, 33.75866, 35.06593, 34.34663, 34.39501, 35.26944, 35.59328, 35.21787, 34.87569, 32.90866, 33.74732, 33.9986, 35.93825, 33.66688, 35.55379, 35.57405, 34.70864, 32.00534, 30.7256, 31.70976, 33.79562, 34.74517, 34.68578, 34.93965, 34.77996, 32.69504, 30.11202, 27.03964, 27.65939, 30.74867, 32.91814, 31.08744, 34.57803, 34.71928, 34.10207, 34.36608, 31.48074, 32.15758, 33.61916, 34.90599, 34.24199, 34.66592, 35.10474, 36.09546, 34.59784, 34.79128, 35.50281, 35.49266, 34.61835, 34.08035, 34.02957, 34.71793, 33.42127, 31.99324, 32.93327, 33.8681, 31.93625, 34.21356, 34.16675, 32.86683, 33.5527, 31.97815, 32.69786, 32.61843, 33.67803, 32.78743, 34.28347, 33.3196, 33.19868, 33.44152, 33.73721, 33.47884, 31.19963, 34.10625, 33.84675, 33.94175, 31.95151, 31.94934, 30.8463, 32.93149, 34.09185, 32.46965, 34.28102, 32.01904, 32.90547, 32.84693, 34.24257, 34.67299, 32.74059, 31.7848, 33.47561, 33.20475, 31.25894, 33.00317, 32.93868, 31.09662, 30.41216, 31.08084, 32.28773, 29.81717, 33.38029, 32.60839, 33.34027, 31.80916, 33.3765, 30.86721, 29.38238, 32.76109, 32.44506, 32.37932, 32.87291, 31.83398, 32.49155, 31.24339, 30.69704, 32.04292, 31.45911, 31.37529, 31.70504, 33.04267, 31.28885, 33.67425, 32.19147, 32.36076, 32.18541, 32.98157, 33.57706, 32.89851, 33.63578, 30.76367, 30.3502, 31.91674, 30.07795, 28.00976, 26.49742, 31.02838, 30.74901, 29.41747, 29.47976, 28.89207, 27.85382, 28.55856, 31.33991, 31.55054, 28.99728, 30.06173, 30.13951, 31.21603, 30.62345, 28.55025, 28.93663, 29.47348, 28.06212, 27.45995, 26.84199, 26.63349, 28.45435, 28.82703, 28.99076, 26.47445, 27.92483, 28.21922, 27.79681, 27.61877, 28.64194, 27.40371, 25.25689, 25.00165, 26.97398, 26.44941, 25.17659, 25.9222, 24.25765, 26.62431, 25.56511, 24.87447, 26.28517, 24.28559, 28.45691, 28.22451, 26.99478, 26.04597, 26.45863, 28.93001, 27.31182, 27.999, 25.86867, 27.17775, 24.62412, 26.42303, 26.45241, 24.83563, 25.96638, 24.90477, 24.56641, 25.11728, 26.10633, 24.47268, 24.95637, 25.91186, 25.72176, 26.20175, 26.55825, 26.59305, 25.91098, 25.80133, 24.75286, 24.62247, 26.89158, 26.59299, 26.79902, 25.35328, 24.63658, 25.40499, 26.89135, 24.63065, 24.76106, 26.17851, 27.67436, 26.37362, 26.83805, 27.89457, 28.66791, 27.41446, 26.16923, 25.386, 28.36095, 27.38941], "type": "scatter", "uid": "15a07cdf-2059-4eb0-ac0c-4241fd4caef0"}, {"line": {"color": "black", "shape": "spline", "smoothing": 0.8, "width": 2}, "mode": "lines", "name": "mean", "showlegend": false, "x": ["1 Jan", "2 Jan", "3 Jan", "4 Jan", "5 Jan", "6 Jan", "7 Jan", "8 Jan", "9 Jan", "10 Jan", "11 Jan", "12 Jan", "13 Jan", "14 Jan", "15 Jan", "16 Jan", "17 Jan", "18 Jan", "19 Jan", "20 Jan", "21 Jan", "22 Jan", "23 Jan", "24 Jan", "25 Jan", "26 Jan", "27 Jan", "28 Jan", "29 Jan", "30 Jan", "31 Jan", "1 Feb", "2 Feb", "3 Feb", "4 Feb", "5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb", "12 Feb", "13 Feb", "14 Feb", "15 Feb", "16 Feb", "17 Feb", "18 Feb", "19 Feb", "20 Feb", "21 Feb", "22 Feb", "23 Feb", "24 Feb", "25 Feb", "26 Feb", "27 Feb", "28 Feb", "1 Mar", "2 Mar", "3 Mar", "4 Mar", "5 Mar", "6 Mar", "7 Mar", "8 Mar", "9 Mar", "10 Mar", "11 Mar", "12 Mar", "13 Mar", "14 Mar", "15 Mar", "16 Mar", "17 Mar", "18 Mar", "19 Mar", "20 Mar", "21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar", "28 Mar", "29 Mar", "30 Mar", "31 Mar", "1 Apr", "2 Apr", "3 Apr", "4 Apr", "5 Apr", "6 Apr", "7 Apr", "8 Apr", "9 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr", "1 May", "2 May", "3 May", "4 May", "5 May", "6 May", "7 May", "8 May", "9 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May", "1 Jun", "2 Jun", "3 Jun", "4 Jun", "5 Jun", "6 Jun", "7 Jun", "8 Jun", "9 Jun", "10 Jun", "11 Jun", "12 Jun", "13 Jun", "14 Jun", "15 Jun", "16 Jun", "17 Jun", "18 Jun", "19 Jun", "20 Jun", "21 Jun", "22 Jun", "23 Jun", "24 Jun", "25 Jun", "26 Jun", "27 Jun", "28 Jun", "29 Jun", "30 Jun", "1 Jul", "2 Jul", "3 Jul", "4 Jul", "5 Jul", "6 Jul", "7 Jul", "8 Jul", "9 Jul", "10 Jul", "11 Jul", "12 Jul", "13 Jul", "14 Jul", "15 Jul", "16 Jul", "17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul", "22 Jul", "23 Jul", "24 Jul", "25 Jul", "26 Jul", "27 Jul", "28 Jul", "29 Jul", "30 Jul", "31 Jul", "1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug", "8 Aug", "9 Aug", "10 Aug", "11 Aug", "12 Aug", "13 Aug", "14 Aug", "15 Aug", "16 Aug", "17 Aug", "18 Aug", "19 Aug", "20 Aug", "21 Aug", "22 Aug", "23 Aug", "24 Aug", "25 Aug", "26 Aug", "27 Aug", "28 Aug", "29 Aug", "30 Aug", "31 Aug", "1 Sep", "2 Sep", "3 Sep", "4 Sep", "5 Sep", "6 Sep", "7 Sep", "8 Sep", "9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep", "22 Sep", "23 Sep", "24 Sep", "25 Sep", "26 Sep", "27 Sep", "28 Sep", "29 Sep", "30 Sep", "1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct", "29 Oct", "30 Oct", "31 Oct", "1 Nov", "2 Nov", "3 Nov", "4 Nov", "5 Nov", "6 Nov", "7 Nov", "8 Nov", "9 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov", "19 Nov", "20 Nov", "21 Nov", "22 Nov", "23 Nov", "24 Nov", "25 Nov", "26 Nov", "27 Nov", "28 Nov", "29 Nov", "30 Nov", "1 Dec", "2 Dec", "3 Dec", "4 Dec", "5 Dec", "6 Dec", "7 Dec", "8 Dec", "9 Dec", "10 Dec", "11 Dec", "12 Dec", "13 Dec", "14 Dec", "15 Dec", "16 Dec", "17 Dec", "18 Dec", "19 Dec", "20 Dec", "21 Dec", "22 Dec", "23 Dec", "24 Dec", "25 Dec", "26 Dec", "27 Dec", "28 Dec", "29 Dec", "30 Dec", "31 Dec"], "y": [30.15082, 30.25706, 30.24096, 30.43624, 30.3749, 30.27262, 30.51925, 30.42524, 29.97163, 30.25787, 30.41823, 30.42002, 30.62204, 30.65068, 30.69131, 30.64957, 30.76242, 30.65437, 30.60567, 30.85721, 30.98156, 31.17157, 31.24897, 31.5029, 31.43053, 31.42099, 31.57433, 31.49974, 31.4037, 31.5096, 31.90406, 31.70672, 31.50153, 31.53861, 31.80112, 31.85934, 32.35937, 32.56027, 32.41983, 32.42221, 32.5406, 32.26173, 32.62737, 32.63394, 32.70137, 32.94682, 33.44725, 33.69596, 33.7414, 33.89012, 33.54967, 33.56476, 34.04292, 34.06041, 33.97365, 34.08653, 34.18482, 34.29532, 34.37332, 33.51355, 34.4701, 34.65338, 34.79133, 34.68016, 34.81936, 35.14846, 35.14189, 35.29372, 35.37942, 35.20267, 35.24989, 35.37938, 35.42746, 35.72361, 35.66865, 35.79269, 35.58962, 35.77519, 36.29696, 36.54533, 36.87871, 36.66031, 37.07295, 37.01537, 36.95649, 37.06337, 37.20078, 37.26864, 37.59723, 37.69588, 37.81224, 37.7607, 37.84167, 37.60626, 37.1917, 37.1434, 37.13335, 36.92629, 37.05729, 37.30768, 37.37347, 37.4873, 37.42355, 37.32701, 37.37473, 37.82969, 37.82545, 38.10673, 38.107, 37.83437, 38.05613, 38.02692, 38.06474, 37.85959, 38.15772, 38.18406, 38.16413, 38.12188, 38.26308, 38.35221, 38.56159, 38.54228, 38.44009, 38.658, 38.26021, 37.57284, 37.70283, 37.72294, 37.97256, 38.06015, 38.35297, 38.48278, 38.21949, 38.34804, 38.38949, 38.35206, 37.30579, 37.62074, 38.19157, 38.548, 38.64642, 38.25265, 38.80731, 38.90014, 38.78104, 38.82327, 38.46592, 37.97132, 38.20986, 38.48121, 38.518, 38.20481, 38.47727, 38.33461, 37.77547, 37.64474, 37.44708, 37.77133, 37.4253, 37.51149, 37.52034, 37.4972, 37.22932, 37.04041, 36.82348, 36.07888, 36.72123, 36.94833, 36.94472, 36.64738, 37.08262, 37.38734, 36.76655, 36.93035, 36.81971, 37.02498, 37.02992, 37.20315, 37.28151, 36.97367, 37.28246, 37.46805, 37.09119, 36.86559, 37.26663, 37.08528, 36.81704, 36.78914, 36.36648, 36.45083, 36.26492, 36.10786, 35.74646, 36.50859, 36.46543, 36.88877, 36.43663, 36.09992, 36.21073, 35.88648, 36.01642, 35.91695, 36.53765, 36.31714, 36.37971, 36.44508, 36.63358, 36.08811, 36.03956, 36.18167, 35.93676, 36.51443, 36.7333, 36.56829, 36.02775, 36.29447, 36.36238, 36.21045, 36.45747, 36.1552, 36.50263, 36.02338, 35.95016, 36.07753, 36.32785, 36.3896, 36.07402, 36.03749, 35.967, 35.63496, 35.41066, 35.47268, 35.52589, 35.7088, 35.43161, 35.56835, 35.54751, 35.60643, 35.66595, 35.72662, 35.14342, 35.61637, 35.98339, 35.40512, 35.37973, 35.30927, 35.65802, 35.33973, 35.51005, 35.21688, 35.32277, 35.32504, 35.23593, 35.05037, 35.26663, 35.16853, 35.12115, 35.42466, 35.33592, 35.72681, 35.54494, 35.1265, 35.3324, 35.75165, 35.36835, 35.60152, 35.7193, 35.69082, 35.26996, 35.02429, 34.89365, 34.67747, 34.31565, 34.27866, 34.54001, 34.79047, 34.58896, 34.48916, 33.83468, 33.80413, 34.21642, 34.38897, 33.8785, 33.86547, 33.76667, 33.74852, 33.4617, 33.22797, 33.10231, 32.63411, 32.41123, 32.34577, 32.5612, 32.19194, 32.21085, 32.46201, 32.31177, 32.07675, 32.29717, 32.54555, 32.47025, 31.90094, 31.83879, 31.74582, 31.42713, 31.05157, 31.56408, 31.07676, 31.18081, 31.32925, 30.96657, 30.97365, 29.93389, 30.61543, 30.91214, 30.96455, 31.43305, 31.22687, 31.13033, 30.77241, 30.39267, 30.93865, 30.84789, 30.73914, 30.5774, 30.68945, 30.06793, 29.95934, 29.7646, 29.84634, 30.01838, 30.14264, 30.00745, 29.81144, 29.79576, 29.83461, 29.89541, 30.25208, 30.08603, 30.06018, 30.42493, 30.00172, 29.96371, 29.89414, 29.95896, 29.60205, 29.96717, 29.85523, 29.83086, 29.58781, 29.40178, 29.89245, 29.77746, 29.47203, 29.67796, 29.86213, 29.64191, 29.73806, 29.77885, 30.09599, 30.15177, 30.32759, 29.92264, 29.78082, 30.00849, 29.7885], "type": "scatter", "uid": "f463dc11-9823-40f0-8a0f-bc4511cf136c"}, {"line": {"color": "rgb(0,119,255)", "shape": "spline", "smoothing": 0.8}, "mode": "lines", "name": "max", "showlegend": false, "x": ["1 Jan", "2 Jan", "3 Jan", "4 Jan", "5 Jan", "6 Jan", "7 Jan", "8 Jan", "9 Jan", "10 Jan", "11 Jan", "12 Jan", "13 Jan", "14 Jan", "15 Jan", "16 Jan", "17 Jan", "18 Jan", "19 Jan", "20 Jan", "21 Jan", "22 Jan", "23 Jan", "24 Jan", "25 Jan", "26 Jan", "27 Jan", "28 Jan", "29 Jan", "30 Jan", "31 Jan", "1 Feb", "2 Feb", "3 Feb", "4 Feb", "5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb", "12 Feb", "13 Feb", "14 Feb", "15 Feb", "16 Feb", "17 Feb", "18 Feb", "19 Feb", "20 Feb", "21 Feb", "22 Feb", "23 Feb", "24 Feb", "25 Feb", "26 Feb", "27 Feb", "28 Feb", "1 Mar", "2 Mar", "3 Mar", "4 Mar", "5 Mar", "6 Mar", "7 Mar", "8 Mar", "9 Mar", "10 Mar", "11 Mar", "12 Mar", "13 Mar", "14 Mar", "15 Mar", "16 Mar", "17 Mar", "18 Mar", "19 Mar", "20 Mar", "21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar", "28 Mar", "29 Mar", "30 Mar", "31 Mar", "1 Apr", "2 Apr", "3 Apr", "4 Apr", "5 Apr", "6 Apr", "7 Apr", "8 Apr", "9 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr", "1 May", "2 May", "3 May", "4 May", "5 May", "6 May", "7 May", "8 May", "9 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May", "1 Jun", "2 Jun", "3 Jun", "4 Jun", "5 Jun", "6 Jun", "7 Jun", "8 Jun", "9 Jun", "10 Jun", "11 Jun", "12 Jun", "13 Jun", "14 Jun", "15 Jun", "16 Jun", "17 Jun", "18 Jun", "19 Jun", "20 Jun", "21 Jun", "22 Jun", "23 Jun", "24 Jun", "25 Jun", "26 Jun", "27 Jun", "28 Jun", "29 Jun", "30 Jun", "1 Jul", "2 Jul", "3 Jul", "4 Jul", "5 Jul", "6 Jul", "7 Jul", "8 Jul", "9 Jul", "10 Jul", "11 Jul", "12 Jul", "13 Jul", "14 Jul", "15 Jul", "16 Jul", "17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul", "22 Jul", "23 Jul", "24 Jul", "25 Jul", "26 Jul", "27 Jul", "28 Jul", "29 Jul", "30 Jul", "31 Jul", "1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug", "8 Aug", "9 Aug", "10 Aug", "11 Aug", "12 Aug", "13 Aug", "14 Aug", "15 Aug", "16 Aug", "17 Aug", "18 Aug", "19 Aug", "20 Aug", "21 Aug", "22 Aug", "23 Aug", "24 Aug", "25 Aug", "26 Aug", "27 Aug", "28 Aug", "29 Aug", "30 Aug", "31 Aug", "1 Sep", "2 Sep", "3 Sep", "4 Sep", "5 Sep", "6 Sep", "7 Sep", "8 Sep", "9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep", "22 Sep", "23 Sep", "24 Sep", "25 Sep", "26 Sep", "27 Sep", "28 Sep", "29 Sep", "30 Sep", "1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct", "29 Oct", "30 Oct", "31 Oct", "1 Nov", "2 Nov", "3 Nov", "4 Nov", "5 Nov", "6 Nov", "7 Nov", "8 Nov", "9 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov", "19 Nov", "20 Nov", "21 Nov", "22 Nov", "23 Nov", "24 Nov", "25 Nov", "26 Nov", "27 Nov", "28 Nov", "29 Nov", "30 Nov", "1 Dec", "2 Dec", "3 Dec", "4 Dec", "5 Dec", "6 Dec", "7 Dec", "8 Dec", "9 Dec", "10 Dec", "11 Dec", "12 Dec", "13 Dec", "14 Dec", "15 Dec", "16 Dec", "17 Dec", "18 Dec", "19 Dec", "20 Dec", "21 Dec", "22 Dec", "23 Dec", "24 Dec", "25 Dec", "26 Dec", "27 Dec", "28 Dec", "29 Dec", "30 Dec", "31 Dec"], "y": [23.61255, 23.24604, 23.24756, 23.35683, 23.58961, 23.07722, 22.83921, 22.78842, 23.40395, 23.59583, 23.0902, 23.05522, 23.88094, 23.74687, 23.6721, 23.24479, 22.88996, 22.39473, 23.13421, 24.15677, 24.68037, 23.45847, 23.23667, 23.74611, 23.52134, 22.89961, 22.67094, 22.58103, 23.2177, 23.14839, 23.4835, 24.46922, 23.80155, 23.72703, 22.89727, 23.82664, 23.91829, 22.90429, 23.95744, 24.22358, 24.85759, 24.77091, 24.31927, 24.40708, 24.55729, 23.43893, 23.73669, 24.60585, 25.17353, 25.15878, 24.72511, 23.90115, 24.60611, 25.77971, 25.89703, 24.11248, 25.40755, 25.26173, 24.94063, 23.93288, 25.02054, 25.11443, 25.50688, 24.82865, 25.16949, 25.19805, 25.44533, 25.91273, 25.91382, 25.82093, 25.11431, 25.73594, 26.40701, 25.58246, 25.25857, 26.36775, 25.68899, 26.12806, 25.42531, 26.23084, 26.03022, 25.71118, 26.77634, 27.06431, 26.59448, 26.26234, 26.75985, 27.09043, 26.93819, 26.95179, 27.19308, 27.62125, 27.45318, 27.62729, 27.46634, 27.12262, 27.1407, 27.49372, 27.4896, 27.51003, 27.3073, 27.23959, 27.98919, 28.0076, 28.64829, 27.35363, 28.37005, 28.71654, 28.09011, 28.19232, 28.25844, 28.47296, 28.26963, 28.85651, 29.01741, 28.70933, 28.80572, 28.00654, 27.58639, 28.45719, 28.05316, 28.55024, 29.54939, 28.53292, 28.43035, 29.75613, 29.41274, 29.35073, 28.08123, 28.13605, 28.63643, 28.19913, 28.75843, 28.6508, 28.88772, 28.5828, 28.3019, 28.86888, 28.14157, 28.64653, 28.59866, 28.54171, 28.76117, 28.5934, 29.13482, 29.3337, 28.31761, 28.93484, 28.58708, 29.17954, 28.97225, 28.48428, 29.17721, 28.70803, 28.3798, 28.25389, 28.15251, 27.8654, 28.24894, 27.92599, 28.35642, 28.62175, 28.28796, 28.22953, 28.26588, 27.97215, 27.95348, 28.12575, 28.02859, 28.27608, 28.21849, 28.30395, 28.32715, 28.03531, 28.20662, 27.97681, 28.62558, 27.49837, 27.87845, 27.61605, 27.44127, 27.6115, 27.85104, 27.92679, 27.93398, 28.30033, 27.99484, 27.2752, 27.53683, 27.66895, 28.11623, 27.58835, 27.4369, 27.17203, 27.62469, 27.86453, 27.89843, 27.77681, 27.69129, 27.40222, 27.51862, 27.1954, 27.05417, 27.90673, 27.79155, 28.21021, 28.04832, 28.14813, 28.24719, 28.05768, 27.95019, 27.81012, 28.0622, 27.56828, 27.42817, 27.56165, 27.07773, 27.59583, 27.46131, 26.81101, 26.90773, 27.2319, 27.41912, 27.10073, 27.13472, 26.92183, 27.03487, 27.26622, 27.54033, 27.26733, 27.28211, 26.76219, 26.40829, 27.0957, 26.61472, 27.07914, 26.76305, 26.64465, 26.72269, 27.17279, 26.86781, 26.94826, 26.72351, 26.70076, 26.87247, 26.49587, 27.09397, 26.88, 26.47203, 27.15084, 26.61396, 26.33154, 26.62035, 27.06496, 27.17208, 26.7748, 27.34686, 26.85351, 26.35807, 26.89469, 27.29765, 26.84422, 27.11934, 26.59523, 26.90466, 26.6064, 27.14904, 26.53691, 26.32152, 26.83338, 27.06946, 26.54157, 26.04137, 26.18848, 26.59638, 26.55232, 27.04228, 27.409, 25.80236, 25.96259, 26.33191, 26.4105, 26.39882, 25.55183, 26.15797, 26.11189, 26.14757, 26.05029, 26.32741, 26.33482, 25.96412, 26.42578, 25.84057, 27.16334, 25.77827, 25.59857, 26.25486, 26.0648, 25.83813, 25.49687, 25.35626, 25.97781, 26.45488, 26.30059, 26.18674, 25.19582, 25.15898, 25.07457, 25.38758, 25.07215, 25.36418, 25.02633, 24.92334, 25.71944, 24.71931, 25.06161, 25.06022, 25.58352, 25.45441, 24.87055, 24.62459, 25.02069, 24.72647, 25.01899, 24.98519, 24.07113, 24.82629, 24.93027, 24.64873, 24.85943, 24.35935, 24.38741, 24.21298, 24.01981, 24.01874, 24.09918, 24.45903, 24.32373, 24.60912, 25.57821, 25.1518, 25.94498, 25.0145, 24.96014, 24.27972, 24.4844, 23.88641, 23.82147, 24.04183, 24.31093, 23.88635, 23.80628, 24.1013, 24.96921, 24.59862, 23.78552, 24.21789, 23.5192, 23.28553, 23.79136, 23.88208, 23.48366, 23.95755, 22.84556, 23.3322, 23.85143], "type": "scatter", "uid": "677e841c-c54c-40e7-89fe-0efcbb9d9e35"}, {"fill": "tonexty", "line": {"color": "rgb(0, 119, 255)", "shape": "spline", "smoothing": 0.8}, "mode": "lines", "name": "min", "showlegend": false, "x": ["1 Jan", "2 Jan", "3 Jan", "4 Jan", "5 Jan", "6 Jan", "7 Jan", "8 Jan", "9 Jan", "10 Jan", "11 Jan", "12 Jan", "13 Jan", "14 Jan", "15 Jan", "16 Jan", "17 Jan", "18 Jan", "19 Jan", "20 Jan", "21 Jan", "22 Jan", "23 Jan", "24 Jan", "25 Jan", "26 Jan", "27 Jan", "28 Jan", "29 Jan", "30 Jan", "31 Jan", "1 Feb", "2 Feb", "3 Feb", "4 Feb", "5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb", "12 Feb", "13 Feb", "14 Feb", "15 Feb", "16 Feb", "17 Feb", "18 Feb", "19 Feb", "20 Feb", "21 Feb", "22 Feb", "23 Feb", "24 Feb", "25 Feb", "26 Feb", "27 Feb", "28 Feb", "1 Mar", "2 Mar", "3 Mar", "4 Mar", "5 Mar", "6 Mar", "7 Mar", "8 Mar", "9 Mar", "10 Mar", "11 Mar", "12 Mar", "13 Mar", "14 Mar", "15 Mar", "16 Mar", "17 Mar", "18 Mar", "19 Mar", "20 Mar", "21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar", "28 Mar", "29 Mar", "30 Mar", "31 Mar", "1 Apr", "2 Apr", "3 Apr", "4 Apr", "5 Apr", "6 Apr", "7 Apr", "8 Apr", "9 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr", "1 May", "2 May", "3 May", "4 May", "5 May", "6 May", "7 May", "8 May", "9 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May", "1 Jun", "2 Jun", "3 Jun", "4 Jun", "5 Jun", "6 Jun", "7 Jun", "8 Jun", "9 Jun", "10 Jun", "11 Jun", "12 Jun", "13 Jun", "14 Jun", "15 Jun", "16 Jun", "17 Jun", "18 Jun", "19 Jun", "20 Jun", "21 Jun", "22 Jun", "23 Jun", "24 Jun", "25 Jun", "26 Jun", "27 Jun", "28 Jun", "29 Jun", "30 Jun", "1 Jul", "2 Jul", "3 Jul", "4 Jul", "5 Jul", "6 Jul", "7 Jul", "8 Jul", "9 Jul", "10 Jul", "11 Jul", "12 Jul", "13 Jul", "14 Jul", "15 Jul", "16 Jul", "17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul", "22 Jul", "23 Jul", "24 Jul", "25 Jul", "26 Jul", "27 Jul", "28 Jul", "29 Jul", "30 Jul", "31 Jul", "1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug", "8 Aug", "9 Aug", "10 Aug", "11 Aug", "12 Aug", "13 Aug", "14 Aug", "15 Aug", "16 Aug", "17 Aug", "18 Aug", "19 Aug", "20 Aug", "21 Aug", "22 Aug", "23 Aug", "24 Aug", "25 Aug", "26 Aug", "27 Aug", "28 Aug", "29 Aug", "30 Aug", "31 Aug", "1 Sep", "2 Sep", "3 Sep", "4 Sep", "5 Sep", "6 Sep", "7 Sep", "8 Sep", "9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep", "22 Sep", "23 Sep", "24 Sep", "25 Sep", "26 Sep", "27 Sep", "28 Sep", "29 Sep", "30 Sep", "1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct", "29 Oct", "30 Oct", "31 Oct", "1 Nov", "2 Nov", "3 Nov", "4 Nov", "5 Nov", "6 Nov", "7 Nov", "8 Nov", "9 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov", "19 Nov", "20 Nov", "21 Nov", "22 Nov", "23 Nov", "24 Nov", "25 Nov", "26 Nov", "27 Nov", "28 Nov", "29 Nov", "30 Nov", "1 Dec", "2 Dec", "3 Dec", "4 Dec", "5 Dec", "6 Dec", "7 Dec", "8 Dec", "9 Dec", "10 Dec", "11 Dec", "12 Dec", "13 Dec", "14 Dec", "15 Dec", "16 Dec", "17 Dec", "18 Dec", "19 Dec", "20 Dec", "21 Dec", "22 Dec", "23 Dec", "24 Dec", "25 Dec", "26 Dec", "27 Dec", "28 Dec", "29 Dec", "30 Dec", "31 Dec"], "y": [19.26169, 18.61126, 18.79102, 18.87487, 18.44382, 18.72325, 18.91555, 17.47927, 17.61034, 17.6987, 18.55478, 17.92947, 18.3418, 17.56977, 17.41005, 17.43737, 17.77012, 17.93851, 17.20584, 17.88012, 18.23497, 18.29166, 18.01935, 18.05289, 18.1844, 17.79388, 17.79252, 18.81429, 19.07061, 18.88379, 18.12193, 18.69124, 18.22651, 18.01565, 18.68645, 18.86499, 18.15092, 17.57056, 17.8301, 17.36519, 17.95156, 18.37296, 18.39945, 17.86259, 18.10584, 18.80559, 18.13911, 18.92931, 19.14134, 18.89351, 19.55364, 20.06073, 19.80344, 20.1197, 19.59216, 19.29041, 18.79969, 19.39175, 19.66762, 18.9572, 19.05378, 20.24262, 18.79462, 19.28639, 20.50014, 19.38362, 19.3606, 19.72475, 20.01237, 19.59913, 20.22549, 19.48312, 19.7993, 19.76432, 20.2413, 22.22431, 21.69733, 21.64329, 21.80548, 22.48816, 22.55931, 21.96567, 22.51061, 21.76497, 20.75973, 21.14963, 21.51007, 22.71518, 23.08104, 21.28055, 21.63224, 23.18685, 23.29581, 22.17707, 23.65711, 23.70496, 23.32541, 22.29985, 23.35575, 24.14181, 23.80689, 23.57552, 22.58981, 22.98176, 22.37407, 22.14348, 24.40492, 23.31577, 22.00355, 24.2827, 24.11593, 23.5729, 20.25474, 23.05816, 24.06375, 21.66186, 23.57338, 24.44907, 24.5875, 24.50197, 24.0442, 22.55196, 23.67343, 23.99867, 23.63989, 23.21608, 24.43701, 23.40584, 22.73925, 24.87109, 23.87182, 23.80562, 25.02819, 24.03173, 21.73217, 23.32133, 22.10152, 23.66395, 24.20371, 22.63714, 22.21198, 23.04549, 23.07652, 25.13483, 24.16263, 23.97358, 23.10164, 22.68219, 23.21951, 24.9511, 23.62174, 24.20152, 25.19027, 25.02097, 23.8196, 24.34481, 23.41724, 24.07056, 23.02238, 24.73255, 24.48091, 24.29564, 23.46047, 23.79606, 23.78645, 22.75691, 24.87266, 24.82807, 24.20359, 23.85415, 24.1425, 24.80853, 23.76822, 24.30928, 23.90195, 23.53676, 24.25589, 24.45494, 24.96556, 24.75009, 25.556, 24.46651, 24.81728, 24.03405, 24.05799, 24.16728, 23.86619, 24.97702, 23.93636, 24.48603, 23.85508, 23.93066, 23.68877, 24.15045, 24.26562, 24.43588, 23.85033, 23.39031, 24.07222, 24.31857, 23.87807, 24.34675, 23.89771, 23.55509, 24.16452, 23.83213, 24.02752, 22.71376, 22.91894, 23.9319, 23.29261, 23.73868, 23.84948, 23.74406, 24.26348, 24.55381, 24.19773, 24.83648, 24.26166, 23.08564, 24.86097, 23.75191, 23.17571, 23.31518, 23.63587, 23.07915, 24.77567, 23.0489, 23.68969, 22.70277, 22.99439, 23.4184, 22.83156, 22.76566, 22.97347, 23.01123, 22.92211, 23.62019, 23.0973, 22.80954, 24.26418, 23.14444, 23.38861, 23.49827, 23.30722, 23.05074, 22.71281, 23.4059, 23.56503, 24.02895, 22.33366, 23.31425, 23.22291, 23.2724, 22.68692, 23.0984, 22.8735, 22.53685, 23.5148, 23.12824, 23.20903, 22.90405, 23.63026, 22.49479, 23.69142, 23.43537, 22.2426, 23.02313, 23.50917, 22.98014, 22.91175, 23.20786, 22.80983, 22.84855, 22.59923, 23.57475, 22.84892, 23.10486, 23.22536, 22.95171, 22.40979, 22.80908, 22.54989, 22.91625, 22.87795, 23.16979, 23.30646, 23.10599, 22.96754, 23.14007, 23.23798, 22.84477, 21.55764, 22.57235, 22.78004, 22.51884, 22.31546, 22.33364, 22.37445, 21.8534, 22.55271, 22.57324, 22.28431, 22.13251, 21.67193, 21.83853, 21.84388, 20.29036, 21.74992, 21.7573, 21.29255, 21.54687, 21.4098, 21.3251, 20.17928, 21.55796, 21.64029, 21.90567, 20.8482, 19.18838, 20.02908, 19.88325, 19.94573, 20.33662, 21.10007, 21.05812, 21.50159, 20.80112, 20.20087, 18.84644, 19.16967, 20.36036, 19.38857, 19.64236, 19.64214, 18.19156, 18.45901, 18.71397, 19.25937, 18.83761, 20.08686, 19.66958, 19.33754, 18.33052, 19.1111, 19.31948, 19.35726, 18.95426, 18.94372, 19.53531, 17.81227, 19.16458, 19.54248, 19.07995, 19.0749, 18.63613, 19.00146, 18.66007, 17.9316, 17.8941, 18.07065, 17.71877, 17.07499, 18.09578, 18.63803, 18.3673], "type": "scatter", "uid": "e388ce92-4cc6-41a2-9924-46d3bd1a57ad"}, {"line": {"color": "black", "shape": "spline", "smoothing": 0.8, "width": 2}, "mode": "lines", "name": "mean", "showlegend": false, "x": ["1 Jan", "2 Jan", "3 Jan", "4 Jan", "5 Jan", "6 Jan", "7 Jan", "8 Jan", "9 Jan", "10 Jan", "11 Jan", "12 Jan", "13 Jan", "14 Jan", "15 Jan", "16 Jan", "17 Jan", "18 Jan", "19 Jan", "20 Jan", "21 Jan", "22 Jan", "23 Jan", "24 Jan", "25 Jan", "26 Jan", "27 Jan", "28 Jan", "29 Jan", "30 Jan", "31 Jan", "1 Feb", "2 Feb", "3 Feb", "4 Feb", "5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb", "12 Feb", "13 Feb", "14 Feb", "15 Feb", "16 Feb", "17 Feb", "18 Feb", "19 Feb", "20 Feb", "21 Feb", "22 Feb", "23 Feb", "24 Feb", "25 Feb", "26 Feb", "27 Feb", "28 Feb", "1 Mar", "2 Mar", "3 Mar", "4 Mar", "5 Mar", "6 Mar", "7 Mar", "8 Mar", "9 Mar", "10 Mar", "11 Mar", "12 Mar", "13 Mar", "14 Mar", "15 Mar", "16 Mar", "17 Mar", "18 Mar", "19 Mar", "20 Mar", "21 Mar", "22 Mar", "23 Mar", "24 Mar", "25 Mar", "26 Mar", "27 Mar", "28 Mar", "29 Mar", "30 Mar", "31 Mar", "1 Apr", "2 Apr", "3 Apr", "4 Apr", "5 Apr", "6 Apr", "7 Apr", "8 Apr", "9 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr", "1 May", "2 May", "3 May", "4 May", "5 May", "6 May", "7 May", "8 May", "9 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May", "1 Jun", "2 Jun", "3 Jun", "4 Jun", "5 Jun", "6 Jun", "7 Jun", "8 Jun", "9 Jun", "10 Jun", "11 Jun", "12 Jun", "13 Jun", "14 Jun", "15 Jun", "16 Jun", "17 Jun", "18 Jun", "19 Jun", "20 Jun", "21 Jun", "22 Jun", "23 Jun", "24 Jun", "25 Jun", "26 Jun", "27 Jun", "28 Jun", "29 Jun", "30 Jun", "1 Jul", "2 Jul", "3 Jul", "4 Jul", "5 Jul", "6 Jul", "7 Jul", "8 Jul", "9 Jul", "10 Jul", "11 Jul", "12 Jul", "13 Jul", "14 Jul", "15 Jul", "16 Jul", "17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul", "22 Jul", "23 Jul", "24 Jul", "25 Jul", "26 Jul", "27 Jul", "28 Jul", "29 Jul", "30 Jul", "31 Jul", "1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug", "8 Aug", "9 Aug", "10 Aug", "11 Aug", "12 Aug", "13 Aug", "14 Aug", "15 Aug", "16 Aug", "17 Aug", "18 Aug", "19 Aug", "20 Aug", "21 Aug", "22 Aug", "23 Aug", "24 Aug", "25 Aug", "26 Aug", "27 Aug", "28 Aug", "29 Aug", "30 Aug", "31 Aug", "1 Sep", "2 Sep", "3 Sep", "4 Sep", "5 Sep", "6 Sep", "7 Sep", "8 Sep", "9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep", "22 Sep", "23 Sep", "24 Sep", "25 Sep", "26 Sep", "27 Sep", "28 Sep", "29 Sep", "30 Sep", "1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct", "29 Oct", "30 Oct", "31 Oct", "1 Nov", "2 Nov", "3 Nov", "4 Nov", "5 Nov", "6 Nov", "7 Nov", "8 Nov", "9 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov", "19 Nov", "20 Nov", "21 Nov", "22 Nov", "23 Nov", "24 Nov", "25 Nov", "26 Nov", "27 Nov", "28 Nov", "29 Nov", "30 Nov", "1 Dec", "2 Dec", "3 Dec", "4 Dec", "5 Dec", "6 Dec", "7 Dec", "8 Dec", "9 Dec", "10 Dec", "11 Dec", "12 Dec", "13 Dec", "14 Dec", "15 Dec", "16 Dec", "17 Dec", "18 Dec", "19 Dec", "20 Dec", "21 Dec", "22 Dec", "23 Dec", "24 Dec", "25 Dec", "26 Dec", "27 Dec", "28 Dec", "29 Dec", "30 Dec", "31 Dec"], "y": [21.04407, 20.87201, 21.02772, 21.13306, 21.09457, 21.08452, 20.99536, 20.99714, 21.25962, 21.09376, 20.84264, 20.71402, 20.71453, 20.66537, 20.63098, 20.3577, 20.57994, 20.34129, 20.33084, 20.55464, 20.72508, 20.66702, 20.65295, 20.71523, 20.51748, 20.56427, 20.51525, 20.72308, 21.02666, 20.97345, 21.30913, 21.20023, 20.93117, 20.76496, 21.06873, 21.40639, 21.1468, 21.03611, 21.15348, 21.16784, 21.36371, 21.48442, 21.42913, 21.54048, 21.47804, 21.5105, 21.54091, 21.85507, 22.00532, 22.01254, 22.17649, 22.0734, 22.31982, 22.22432, 22.08137, 21.82244, 21.98652, 22.26722, 22.19168, 22.17046, 22.33211, 22.29088, 22.37517, 22.3493, 22.5346, 22.67219, 22.77423, 22.89985, 23.01235, 23.1403, 22.93157, 23.03589, 23.39693, 23.26859, 23.40487, 23.70975, 23.56522, 23.53479, 23.6744, 23.94459, 24.02835, 23.97197, 24.51137, 24.30729, 24.41598, 24.53725, 24.72276, 25.2113, 25.32851, 25.4619, 25.42903, 25.49805, 25.70719, 25.34427, 25.50949, 25.65368, 25.55512, 25.52417, 25.59773, 25.89763, 25.71969, 25.79675, 25.74187, 25.92332, 26.01942, 25.81762, 26.07751, 26.2245, 26.02654, 26.30506, 26.6029, 26.52083, 26.05764, 26.36532, 26.5315, 26.39018, 26.71647, 26.70337, 26.44007, 26.89388, 26.89633, 26.59939, 26.67501, 26.71231, 26.31792, 26.39197, 26.51443, 26.4582, 26.48846, 26.66094, 26.72148, 26.72726, 26.88319, 26.8759, 26.77962, 26.76997, 26.44129, 26.78133, 26.762, 26.77438, 26.69244, 26.65511, 26.8014, 26.83641, 26.90342, 27.15456, 26.76749, 26.21425, 26.82906, 26.67211, 26.94668, 26.79757, 26.9831, 26.88054, 26.49231, 26.64645, 26.65492, 26.22826, 26.28012, 26.42191, 26.69104, 26.42136, 26.51373, 26.50892, 26.54979, 26.33977, 26.27964, 26.35704, 26.22036, 26.26911, 26.18512, 26.44023, 26.40322, 26.45681, 26.25829, 26.46707, 26.44379, 26.39776, 26.53349, 26.79171, 26.68808, 26.2855, 26.47302, 26.27645, 26.50281, 26.78004, 26.38853, 26.37451, 26.16473, 26.12407, 26.13007, 25.97594, 25.84402, 25.8554, 26.29059, 26.515, 26.26783, 26.11456, 26.21549, 26.07792, 25.83981, 26.01345, 25.87134, 26.14932, 25.98784, 26.04719, 26.347, 25.87782, 26.12008, 25.97488, 26.10458, 26.0326, 26.22055, 25.80426, 25.89984, 26.22304, 25.98299, 26.01381, 25.91016, 25.74955, 25.90167, 25.70137, 25.76128, 25.7582, 25.62398, 25.69138, 25.81052, 25.60164, 25.60266, 25.02091, 25.24998, 25.25374, 25.15221, 25.28286, 25.06909, 25.32081, 25.14281, 25.26272, 25.42646, 25.3025, 25.45176, 25.4022, 25.42779, 25.30001, 25.06955, 25.11055, 25.09663, 25.45115, 25.28837, 25.50083, 25.34898, 25.13983, 25.13561, 25.1075, 25.21932, 25.07082, 25.10088, 25.09076, 25.14158, 25.14187, 25.26612, 24.92912, 25.18995, 25.1343, 25.1524, 25.09573, 25.03997, 24.98926, 24.92934, 24.93835, 24.89578, 24.65111, 24.59617, 24.7551, 24.9581, 24.98537, 24.75129, 24.74317, 24.6343, 24.52662, 24.90335, 24.64737, 24.39342, 24.55438, 24.74389, 24.60872, 24.63571, 24.64621, 24.53835, 24.53062, 24.32838, 24.13986, 24.00309, 24.23094, 24.27006, 24.00317, 24.03481, 23.86898, 24.0429, 24.11003, 23.88087, 23.78482, 23.76191, 23.49952, 23.83086, 23.71703, 23.66574, 23.69018, 23.68819, 23.46479, 23.55045, 23.55635, 23.32779, 23.45227, 23.25583, 23.47939, 23.54585, 23.74967, 23.43216, 23.02076, 22.9035, 23.07699, 23.11781, 22.98356, 23.24684, 22.88092, 22.91137, 22.9411, 22.62603, 22.61848, 22.55068, 22.6274, 22.32638, 22.17864, 22.01613, 21.97055, 22.01608, 21.90707, 22.06858, 22.01235, 22.50334, 22.00163, 21.84959, 21.89252, 21.89134, 21.97459, 21.91344, 21.99748, 21.61744, 21.80618, 21.52767, 21.65335, 21.59094, 21.74434, 21.3471, 21.22964, 21.13963, 21.08601, 21.05392, 20.93464, 20.84817, 20.98227, 21.16772, 20.95098, 20.91184, 20.93118], "type": "scatter", "uid": "6b59a16e-94ed-4b9b-a394-98f75c201b8c"}], "layout": {"template": {"data": {"barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}, "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}}, "type": "barpolar"}], "bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}, "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}}, "type": "bar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram": [{"marker": {"pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}}, "type": "histogram"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatter": [{"fillpattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}, "type": "scatter"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "font": {"size": 15}, "plot_bgcolor": "rgb(255,255,227)", "xaxis": {"showline": true, "linewidth": 2, "linecolor": "black", "tickangle": -90, "title": {"text": "Year"}}, "yaxis": {"showline": true, "linewidth": 2, "linecolor": "black", "title": {"text": "Temperature (Celsius)"}}, "title": {"text": "Temperature maximum and minimum"}}};
+				Plotly.plot('bargraphcum',graphs,{});
+			    </script>
+                     </div>
+                  </div>
+
+                </div>
+      </div>
+
+<div class="row g-2 align-items-end">
+
+                <div class="col-md-6">
+                        <div class="rounded-box" style="width:650px">
+  This plot shows the year-wise mean maximum (Tmax) and minimum (Tmin) temperatures over the last 30 years. It highlights how average temperatures vary from year to year
+</div>
+                </div>
+    <div class="col-md-6">
+           <div class="rounded-box" style="width:650px">
+  This plot shows the historical maximum, minimum, and average values of Tmax and Tmin for each calendar day based on the last 30 years. For example, the value shown for 1 January represents the highest and lowest temperatures recorded on that date during this period, along with the long-term average. The shaded bands indicate the historical range, while the central lines show the average pattern.
+</div>
+                </div>
+</div>
+
+
+
+  <div class="row g-2 align-items-end">
+
+                <div class="col-md-3">
+                 <div style="width:900px">
+		   <div class="chart" id="bargraphemax" style="width:1300px;height:700px;" >
+			    <script>
+				var graphs = ;
+				Plotly.plot('bargraphemax',graphs,{});
+			    </script>
+		   </div>
+                </div>
+              </div>
+
+   </div>
+
+
+
+    <div class="row g-2 align-items-end">
+
+                <div class="col-md-3">
+                  <div style="width:900px">
+                     <div class="chart" id="bargraphemin" style="width:1300px;height:700px;" >
+                        <script>
+                         var graphs = ;
+                         Plotly.plot('bargraphemin',graphs,{});
+                        </script>
+                    </div>
+                </div>
+                     
+             </div>
+     </div>
+
+
+
+
+</main>
+</div>
+<footer> <a href="#" onclick="window.open('/query', 'Mausam Sankalp: Queries-Support', 'width=600,height=400,left=100,top=100'); return false;"><h6><font color="white">For Queries/Support</font></h6> </a>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;© 2025 Agro-Met Advisory Services Division,IMD,MOES. All rights reserved.
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <a href="#" onclick="window.open('/disclaimer', 'Mausam Sankalp: Disclaimer', 'width=600,height=400,left=100,top=100'); return false;"><h6><font color="white"> Disclaimer</font></h6></a>
+    </footer>
+<script>
+  // Toggle submenu
+  document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+    toggle.addEventListener('click', e => {
+      e.preventDefault();
+      const submenu = document.getElementById(toggle.getAttribute('aria-controls'));
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      if(expanded){
+        submenu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        submenu.setAttribute('aria-hidden', 'true');
+        toggle.querySelector('.arrow').classList.remove('down');
+      } else {
+        submenu.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+        submenu.setAttribute('aria-hidden', 'false');
+        toggle.querySelector('.arrow').classList.add('down');
+      }
+    });
+  });
+
+  // Responsive sidebar toggle for mobile
+  const sidebar = document.getElementById('sidebar');
+  const hamburger = document.getElementById('hamburger');
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  // Allow hamburger toggle with keyboard
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      sidebar.classList.toggle('open');
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Submenu toggle logic
+    document.querySelectorAll(".toggle-btn").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        const submenu = e.target.closest("a").nextElementSibling;
+        if (submenu && submenu.classList.contains("submenu")) {
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
